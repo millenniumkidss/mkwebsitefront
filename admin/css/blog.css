@@ -1,0 +1,662 @@
+/* =========================================================
+   MILLENNIUM KIDSS ADMIN
+   BLOG PAGE
+========================================================= */
+
+.page-content {
+  padding: 28px;
+}
+
+/* =========================================================
+   BLOG LIST PAGE
+========================================================= */
+
+.blog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.blog-header h2 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  color: #24443a;
+}
+
+.blog-header p {
+  margin: 0;
+  color: #8b9992;
+  font-size: 13px;
+}
+
+.add-blog-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  background: #19a463;
+  color: white;
+
+  border-radius: 13px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow: 0 8px 18px rgba(25, 164, 99, 0.18);
+
+  transition: 0.2s;
+}
+
+.add-blog-btn:hover {
+  background: #158b54;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   BLOG FILTERS
+========================================================= */
+
+.blog-filters {
+  background: white;
+  padding: 13px;
+
+  border-radius: 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 22px;
+
+  box-shadow: 0 7px 22px rgba(35, 70, 55, 0.05);
+}
+
+.blog-filters button {
+  border: none;
+  background: transparent;
+
+  padding: 10px 15px;
+
+  border-radius: 10px;
+
+  color: #6c7c74;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.blog-filters button span {
+  margin-left: 4px;
+  opacity: 0.65;
+}
+
+.blog-filters button:hover,
+.blog-filters button.filter-active {
+  background: #ddf5e8;
+  color: #198653;
+}
+
+.blog-filters select {
+  margin-left: auto;
+
+  height: 39px;
+  padding: 0 14px;
+
+  border: 1px solid #e0e9e4;
+
+  border-radius: 10px;
+
+  background: #fafcfb;
+
+  color: #586b62;
+
+  outline: none;
+}
+
+/* =========================================================
+   BLOG GRID
+========================================================= */
+
+.blog-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+/* =========================================================
+   BLOG CARD
+========================================================= */
+
+.blog-card {
+  background: white;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 25px rgba(35, 70, 55, 0.06);
+
+  transition: 0.25s;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 15px 35px rgba(35, 70, 55, 0.1);
+}
+
+/* =========================================================
+   BLOG IMAGE
+========================================================= */
+
+.blog-image {
+  height: 170px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 65px;
+}
+
+.green-blog {
+  background: linear-gradient(135deg, #ddf5e8, #c7efdc);
+}
+
+.blue-blog {
+  background: linear-gradient(135deg, #ddeeff, #cde5fa);
+}
+
+.pink-blog {
+  background: linear-gradient(135deg, #ffe3ea, #ffd5e0);
+}
+
+/* =========================================================
+   BLOG BODY
+========================================================= */
+
+.blog-body {
+  padding: 20px;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 12px;
+
+  color: #9aa59f;
+  font-size: 11px;
+}
+
+.category {
+  background: #ddf5e8;
+  color: #198653;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-weight: 700;
+}
+
+.category.blue {
+  background: #ddeeff;
+  color: #367ba9;
+}
+
+.category.pink {
+  background: #ffe3ea;
+  color: #b45c76;
+}
+
+.blog-body h3 {
+  margin: 0 0 9px;
+
+  color: #24443a;
+
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.blog-body p {
+  margin: 0;
+
+  color: #78877f;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   BLOG FOOTER
+========================================================= */
+
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 20px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #edf2ef;
+}
+
+.published-badge,
+.draft-badge {
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.published-badge {
+  background: #ddf5e8;
+  color: #198653;
+}
+
+.draft-badge {
+  background: #fff3c7;
+  color: #a37919;
+}
+
+.edit-btn {
+  display: inline-block;
+
+  text-decoration: none;
+
+  padding: 7px 11px;
+
+  background: #ede4ff;
+
+  color: #7954aa;
+
+  border-radius: 8px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.delete-btn {
+  border: none;
+
+  padding: 7px 11px;
+
+  background: #ffe3ea;
+
+  color: #b45c76;
+
+  border-radius: 8px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  margin-left: 4px;
+}
+
+/* =========================================================
+   ADD BLOG / EDITOR
+========================================================= */
+
+.blog-editor-layout {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 340px;
+
+  gap: 22px;
+
+  align-items: start;
+}
+
+.editor-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.editor-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.editor-card {
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 24px;
+
+  box-shadow: 0 8px 25px rgba(35, 70, 55, 0.06);
+}
+
+.editor-card h3 {
+  margin: 0 0 20px;
+
+  color: #24443a;
+
+  font-size: 17px;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #40564c;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dfe9e4;
+
+  background: #fbfdfc;
+
+  border-radius: 12px;
+
+  padding: 12px 14px;
+
+  color: #40564c;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.form-group input {
+  height: 44px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.form-group select {
+  height: 44px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #19a463;
+
+  background: white;
+
+  box-shadow: 0 0 0 3px rgba(25, 164, 99, 0.08);
+}
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 22px;
+}
+
+.section-title h3 {
+  margin: 0 0 5px;
+}
+
+.section-title p {
+  margin: 0;
+
+  color: #89968f;
+
+  font-size: 12px;
+}
+
+.section-title > span {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 12px;
+
+  background: #ddeeff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   PUBLISH PANEL
+========================================================= */
+
+.publish-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+
+  border-bottom: 1px solid #edf2ef;
+
+  color: #63736b;
+  font-size: 13px;
+}
+
+.publish-row select {
+  height: 38px;
+
+  border: 1px solid #dfe9e4;
+
+  border-radius: 9px;
+
+  padding: 0 10px;
+
+  background: #fbfdfc;
+
+  color: #4f6359;
+
+  outline: none;
+}
+
+.publish-buttons {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 9px;
+}
+
+.save-draft-btn,
+.publish-btn {
+  height: 42px;
+
+  border-radius: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  font-size: 12px;
+}
+
+.save-draft-btn {
+  border: 1px solid #dbe7e1;
+
+  background: #f7faf8;
+
+  color: #557066;
+}
+
+.publish-btn {
+  border: none;
+
+  background: #19a463;
+
+  color: white;
+
+  box-shadow: 0 6px 15px rgba(25, 164, 99, 0.18);
+}
+
+.save-draft-btn:hover {
+  background: #eef5f1;
+}
+
+.publish-btn:hover {
+  background: #158b54;
+}
+
+/* =========================================================
+   IMAGE UPLOAD
+========================================================= */
+
+.image-upload {
+  min-height: 170px;
+
+  border: 2px dashed #cfe0d7;
+
+  border-radius: 17px;
+
+  background: #f9fcfa;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.image-upload:hover {
+  border-color: #19a463;
+  background: #f3fbf6;
+}
+
+.image-upload span {
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.image-upload strong {
+  color: #40564c;
+  font-size: 13px;
+}
+
+.image-upload small {
+  color: #9aa59f;
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+.image-upload input {
+  display: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1150px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-editor-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+}
+
+@media (max-width: 750px) {
+  .page-content {
+    padding: 18px;
+  }
+
+  .blog-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .add-blog-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .blog-filters {
+    flex-wrap: wrap;
+  }
+
+  .blog-filters select {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .blog-filters button {
+    padding: 8px 10px;
+  }
+
+  .blog-image {
+    height: 145px;
+  }
+}

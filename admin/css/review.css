@@ -1,0 +1,732 @@
+/* =========================================================
+   MILLENNIUM KIDSS ADMIN
+   REVIEWS PAGE
+========================================================= */
+
+.page-content {
+    padding: 28px;
+}
+
+
+/* =========================
+   REVIEW OVERVIEW
+========================= */
+
+.review-overview {
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 28px;
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 8px 25px rgba(35,70,55,0.06);
+}
+
+
+/* =========================
+   RATING SUMMARY
+========================= */
+
+.rating-summary {
+    min-width: 260px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.big-rating {
+    font-size: 55px;
+    line-height: 1;
+    font-weight: 800;
+    color: #24443a;
+}
+
+.rating-summary p {
+    margin: 6px 0 0;
+    color: #89968f;
+    font-size: 13px;
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+.stars {
+    color: #f3b83f;
+    letter-spacing: 3px;
+    font-size: 17px;
+}
+
+
+/* =========================
+   RATING BARS
+========================= */
+
+.rating-bars {
+    flex: 1;
+    max-width: 500px;
+}
+
+.rating-bars > div {
+    display: grid;
+    grid-template-columns: 35px 1fr 25px;
+    align-items: center;
+    gap: 10px;
+    margin: 9px 0;
+}
+
+.rating-bars span,
+.rating-bars small {
+    color: #6d7c75;
+    font-size: 12px;
+}
+
+.rating-bar {
+    height: 8px;
+    background: #edf2ef;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.rating-bar i {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: #f3c75f;
+}
+
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.review-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.review-toolbar h2 {
+    margin: 0;
+    color: #24443a;
+    font-size: 21px;
+}
+
+.review-toolbar select {
+    height: 42px;
+    padding: 0 15px;
+    border: 1px solid #dfe9e4;
+    background: white;
+    border-radius: 12px;
+    color: #52665d;
+    outline: none;
+}
+
+
+/* =========================
+   REVIEW GRID
+========================= */
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* =========================
+   REVIEW CARD
+========================= */
+
+.review-card {
+    background: #ffffff;
+
+    padding: 23px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 8px 25px rgba(35,70,55,0.06);
+
+    border-left: 5px solid #19a463;
+
+    transition: 0.25s;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(35,70,55,0.10);
+}
+
+.review-card.blue-card {
+    border-left-color: #67a9df;
+}
+
+.review-card.yellow-card {
+    border-left-color: #e6bb55;
+    background: #fffdf6;
+}
+
+.review-card.pink-card {
+    border-left-color: #df7e9b;
+}
+
+
+/* =========================
+   REVIEW USER
+========================= */
+
+.review-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-avatar {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 14px;
+
+    background: #DDF5E8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #198653;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.review-user strong {
+    display: block;
+    color: #24443a;
+    font-size: 14px;
+}
+
+.review-user small {
+    display: block;
+    color: #929e99;
+    margin-top: 3px;
+    font-size: 11px;
+}
+
+.review-date {
+    color: #9ba7a2;
+    font-size: 11px;
+}
+
+
+/* =========================
+   REVIEW TEXT
+========================= */
+
+.review-card > .stars {
+    margin: 17px 0 10px;
+}
+
+.review-card p {
+    color: #63736b;
+    line-height: 1.7;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top: 1px solid #edf2ef;
+}
+
+.published-badge,
+.pending-badge {
+    padding: 6px 11px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.published-badge {
+    background: #DDF5E8;
+    color: #198653;
+}
+
+.pending-badge {
+    background: #FFF3C7;
+    color: #a37919;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.more-btn {
+    border: none;
+    background: #f4f7f5;
+    width: 34px;
+    height: 30px;
+    border-radius: 9px;
+    color: #66776e;
+    cursor: pointer;
+}
+
+.review-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.approve-btn,
+.hide-btn {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.approve-btn {
+    background: #DDF5E8;
+    color: #198653;
+}
+
+.hide-btn {
+    background: #FFE3EA;
+    color: #b45c76;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .review-overview {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .rating-bars {
+        width: 100%;
+        max-width: none;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page-content {
+        padding: 18px;
+    }
+
+    .review-toolbar {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .review-toolbar select {
+        width: 100%;
+    }
+
+    .review-card-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .review-date {
+        margin-left: 56px;
+    }
+
+}
+
+/* =====================================================
+   REVIEW TOOLBAR
+===================================================== */
+
+.review-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.review-toolbar h2 {
+    margin-bottom: 4px;
+}
+
+.review-toolbar p {
+    margin: 0;
+    color: #7d8790;
+    font-size: 13px;
+}
+
+.review-toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* =====================================================
+   ADD REVIEW BUTTON
+===================================================== */
+
+.add-review-btn {
+    border: none;
+    background: #199f61;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: 0.25s ease;
+    box-shadow: 0 6px 15px rgba(25, 159, 97, 0.18);
+}
+
+.add-review-btn span {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.add-review-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   REVIEW ACTIONS
+===================================================== */
+
+.review-actions {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.edit-btn,
+.delete-btn,
+.approve-btn,
+.hide-btn {
+    border: none;
+    padding: 7px 11px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.edit-btn {
+    background: #e8f5ff;
+    color: #2675a8;
+}
+
+.delete-btn {
+    background: #fff0f0;
+    color: #d95353;
+}
+
+.approve-btn {
+    background: #e7f8ee;
+    color: #218a54;
+}
+
+.hide-btn {
+    background: #fff5df;
+    color: #a36b12;
+}
+
+
+/* =====================================================
+   REVIEW MODAL
+===================================================== */
+
+.review-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 38, 33, 0.48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s ease;
+}
+
+.review-modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =====================================================
+   MODAL BOX
+===================================================== */
+
+.review-modal {
+    width: 100%;
+    max-width: 570px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    background: #fffdf8;
+    border-radius: 22px;
+    padding: 28px;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.18);
+
+    transform: translateY(20px);
+    transition: 0.25s ease;
+}
+
+.review-modal-overlay.show .review-modal {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   MODAL HEADER
+===================================================== */
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.modal-header h2 {
+    margin: 0 0 5px;
+    color: #174f3b;
+    font-size: 23px;
+}
+
+.modal-header p {
+    margin: 0;
+    color: #818b86;
+    font-size: 13px;
+}
+
+.modal-close {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #f3f5f2;
+    color: #52625a;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #30453b;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid #e2e8e4;
+    background: white;
+
+    border-radius: 11px;
+
+    padding: 12px 13px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #62bd8e;
+    box-shadow: 0 0 0 3px rgba(25, 159, 97, 0.08);
+}
+
+
+/* =====================================================
+   RATING SELECTOR
+===================================================== */
+
+.rating-selector {
+    display: flex;
+    gap: 5px;
+}
+
+.rating-selector button {
+    border: none;
+    background: transparent;
+
+    font-size: 30px;
+    color: #d9dedb;
+
+    cursor: pointer;
+
+    transition: 0.15s ease;
+}
+
+.rating-selector button.selected {
+    color: #f5bd4f;
+}
+
+.rating-selector button:hover {
+    transform: scale(1.12);
+}
+
+
+/* =====================================================
+   MODAL BUTTONS
+===================================================== */
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid #edf0ee;
+}
+
+.cancel-btn,
+.save-review-btn {
+    border: none;
+    border-radius: 10px;
+
+    padding: 11px 18px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #f0f2f1;
+    color: #59655f;
+}
+
+.save-review-btn {
+    background: #199f61;
+    color: white;
+    box-shadow: 0 5px 14px rgba(25, 159, 97, 0.18);
+}
+
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+
+.published-badge {
+    background: #e5f8ed;
+    color: #238653;
+}
+
+.pending-badge {
+    background: #fff3d9;
+    color: #a87518;
+}
+
+.hidden-badge {
+    background: #eeeeee;
+    color: #777777;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .review-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .review-toolbar-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .review-toolbar-actions select,
+    .add-review-btn {
+        width: 100%;
+    }
+
+    .review-modal {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .review-actions {
+        flex-wrap: wrap;
+    }
+
+}

@@ -1,0 +1,680 @@
+/* =========================================================
+   MILLENNIUM KIDSS ADMIN PANEL
+   GLOBAL / SIDEBAR / HEADER
+========================================================= */
+
+:root {
+    --mk-green: #19a463;
+    --mk-green-dark: #147a4a;
+
+    --pastel-green: #ddf5e8;
+    --pastel-blue: #ddeeff;
+    --pastel-yellow: #fff3c7;
+    --pastel-pink: #ffe3ea;
+    --pastel-purple: #ede4ff;
+
+    --bg: #f7faf8;
+    --white: #ffffff;
+
+    --text: #24352e;
+    --muted: #7a8982;
+
+    --border: #e6eee9;
+
+    --sidebar-width: 255px;
+    --header-height: 82px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   MAIN ADMIN LAYOUT
+========================================================= */
+
+.admin-layout {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg);
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: var(--sidebar-width);
+    height: 100vh;
+
+    background: var(--white);
+
+    border-right: 1px solid var(--border);
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1100;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+    height: var(--header-height);
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border-bottom: 1px solid var(--border);
+
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 14px;
+
+    background: var(--pastel-green);
+
+    color: var(--mk-green);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    box-shadow:
+        0 5px 15px rgba(25, 164, 99, 0.12);
+}
+
+.brand-text h2 {
+    font-size: 15px;
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+.brand-text span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 11px;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+========================================================= */
+
+.sidebar-menu {
+    padding: 20px 13px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    flex: 1;
+}
+
+.menu-item {
+    min-height: 48px;
+
+    padding: 0 13px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 13px;
+
+    color: #687870;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+    background: #f2faf5;
+    color: var(--mk-green);
+}
+
+.menu-item.active {
+    background: var(--pastel-green);
+    color: var(--mk-green);
+
+    font-weight: 700;
+
+    box-shadow:
+        inset 3px 0 0 var(--mk-green);
+}
+
+.menu-icon {
+    width: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+.menu-count {
+    margin-left: auto;
+
+    min-width: 24px;
+    height: 22px;
+
+    padding: 0 7px;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--pastel-pink);
+
+    color: #c45d78;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+========================================================= */
+
+.sidebar-bottom {
+    padding: 15px;
+
+    border-top: 1px solid var(--border);
+
+    flex-shrink: 0;
+}
+
+.admin-mini-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+.profile-avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 12px;
+
+    background: var(--pastel-blue);
+
+    color: #5680aa;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-details strong {
+    font-size: 12px;
+}
+
+.profile-details small {
+    margin-top: 2px;
+
+    font-size: 10px;
+
+    color: var(--muted);
+}
+
+.logout-btn {
+    width: 100%;
+
+    min-height: 42px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background: #fff1f3;
+
+    color: #c85d70;
+
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.logout-btn:hover {
+    background: #ffe2e7;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+/*
+   IMPORTANT:
+   Sidebar = 255px
+   Header = 82px
+
+   Main content is pushed beside sidebar.
+*/
+
+.main-content {
+    margin-left: var(--sidebar-width);
+
+    width: calc(100% - var(--sidebar-width));
+
+    min-height: 100vh;
+
+    position: relative;
+
+    background: var(--bg);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.top-header {
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+    height: var(--header-height);
+
+    background: rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    z-index: 900;
+}
+
+
+/* =========================================================
+   HEADER LEFT
+========================================================= */
+
+.header-left {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    min-width: 0;
+}
+
+.page-heading {
+    min-width: 0;
+}
+
+.page-heading h1 {
+    font-size: 23px;
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+.page-heading p {
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    border: 0;
+    border-radius: 11px;
+
+    background: var(--pastel-green);
+
+    color: var(--mk-green);
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* SEARCH */
+
+.header-search {
+    width: 220px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 13px;
+
+    background: #f7faf8;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+}
+
+.header-search span {
+    color: #91a099;
+
+    font-size: 18px;
+}
+
+.header-search input {
+    width: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    font-size: 12px;
+
+    color: var(--text);
+}
+
+.header-search input::placeholder {
+    color: #a1aea8;
+}
+
+
+/* NOTIFICATION */
+
+.notification-btn {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background: var(--pastel-yellow);
+
+    cursor: pointer;
+
+    font-size: 17px;
+}
+
+.notification-dot {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #f17b8c;
+
+    border: 2px solid white;
+}
+
+
+/* HEADER PROFILE */
+
+.header-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.header-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 12px;
+
+    background: var(--pastel-purple);
+
+    color: #755ca8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.header-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-profile-info strong {
+    font-size: 12px;
+}
+
+.header-profile-info small {
+    margin-top: 2px;
+
+    font-size: 10px;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   PAGE CONTENT
+========================================================= */
+
+/*
+   This guarantees the page content stays BELOW the header.
+*/
+
+.page-content {
+    width: 100%;
+
+    min-height: calc(100vh - var(--header-height));
+
+    padding: 28px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header-search {
+        width: 170px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        transform: translateX(-100%);
+
+        transition: transform 0.25s ease;
+
+        box-shadow:
+            10px 0 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+    .mobile-menu {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .top-header {
+        padding: 0 20px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .header-search {
+        display: none;
+    }
+
+    .header-profile-info {
+        display: none;
+    }
+
+    .header-profile {
+        display: none;
+    }
+
+    .top-header {
+        height: 72px;
+    }
+
+    .page-content {
+        padding: 20px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .page-heading h1 {
+        font-size: 19px;
+    }
+
+    .page-heading p {
+        font-size: 10px;
+    }
+
+    .page-content {
+        padding: 15px;
+    }
+
+}

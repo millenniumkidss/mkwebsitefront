@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enquiries | Millennium Kidss Admin</title>
+
+    <link rel="stylesheet" href="../admin/css/admin.css" />
+    <link rel="stylesheet" href="../admin/css/enquiries.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <img src="../img/logo-3.png" alt="Millennium Kidss" />
+        </div>
+
+        <div class="sidebar-title">ADMIN PANEL</div>
+
+        <nav class="sidebar-nav">
+          <a href="admin-dashboard.html" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="enquiries.html" class="nav-item">
+            <span class="nav-icon">📩</span>
+            <span>Enquiries</span>
+          </a>
+
+          <a href="Review.html" class="nav-item">
+            <span class="nav-icon">⭐</span>
+            <span>Reviews</span>
+          </a>
+
+          <a href="blog.html" class="nav-item">
+            <span class="nav-icon">📝</span>
+            <span>Blogs</span>
+          </a>
+
+          <a href="admin-gallery.html" class="nav-item">
+            <span class="nav-icon">🖼️</span>
+            <span>Gallery</span>
+          </a>
+
+          <a href="admin-videos.html" class="nav-item">
+            <span class="nav-icon">🎥</span>
+            <span>Videos</span>
+          </a>
+
+          <a href="admin-announcements.html" class="nav-item">
+            <span class="nav-icon">📢</span>
+            <span>Announcements</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="school-badge">
+            <div class="badge-icon">🌱</div>
+
+            <div>
+              <strong>Millennium Kidss</strong>
+              <small>Admin Portal</small>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- =====================================================
+     MAIN AREA
+===================================================== -->
+
+      <div class="dashboard-wrapper">
+        <!-- HEADER -->
+
+        <header class="top-header">
+          <div class="header-left">
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+
+            <div>
+              <span class="header-label">ADMIN PANEL</span>
+              <h1>Enquiries</h1>
+            </div>
+          </div>
+
+          <div class="header-right">
+            <div class="notification">
+              🔔
+              <span class="notification-dot"></span>
+            </div>
+
+            <div class="admin-profile">
+              <div class="admin-avatar">A</div>
+
+              <div class="admin-info">
+                <strong id="adminName">Admin</strong>
+                <span>Administrator</span>
+              </div>
+            </div>
+
+            <!-- <button class="logout-btn" onclick="logout()">Logout</button> -->
+            <button class="logout-btn" id="logoutBtn" type="button">
+              Logout
+            </button>
+          </div>
+        </header>
+
+        <!-- CONTENT -->
+        <section class="page-content">
+          <!-- TOP STATS -->
+          <div class="enquiry-stats">
+            <div class="enquiry-stat green">
+              <div class="stat-icon">📩</div>
+              <div>
+                <span>Total Enquiries</span>
+                <strong id="totalEnquiries">0</strong>
+              </div>
+            </div>
+
+            <div class="enquiry-stat blue">
+              <div class="stat-icon">🆕</div>
+              <div>
+                <span>New</span>
+                <strong id="newEnquiries">0</strong>
+              </div>
+            </div>
+
+            <div class="enquiry-stat yellow">
+              <div class="stat-icon">📞</div>
+              <div>
+                <span>Follow-up</span>
+                <strong id="followupEnquiries">0</strong>
+              </div>
+            </div>
+
+            <div class="enquiry-stat pink">
+              <div class="stat-icon">✅</div>
+              <div>
+                <span>Converted</span>
+                <strong id="convertedEnquiries">0</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- FILTER BAR -->
+          <div class="filter-panel">
+            <div class="filter-title">
+              <h3>All Enquiries</h3>
+              <span id="enquiryCount">Loading enquiries...</span>
+            </div>
+
+            <div class="filters">
+              <select id="statusFilter">
+                <option value="">All Status</option>
+                <option value="New">New</option>
+                <option value="Contacted">Contacted</option>
+                <option value="Follow-up">Follow-up</option>
+                <option value="Converted">Converted</option>
+              </select>
+
+              <select id="branchFilter">
+                <option value="">All Branches</option>
+                <option value="Khamla">Khamla</option>
+                <option value="Narendra Nagar">Narendra Nagar</option>
+                <option value="Nandanvan">Nandanvan</option>
+                <option value="Medical">Medical</option>
+                <option value="Manewada">Manewada</option>
+              </select>
+
+              <select id="programFilter">
+                <option value="">All Programs</option>
+                <option value="Preschool">Preschool</option>
+                <option value="Daycare">Daycare</option>
+              </select>
+
+              <button type="button" class="export-btn" id="exportBtn">
+                ⬇ Export
+              </button>
+              <button type="button" class="export-btn" id="refreshBtn">
+                ↻ Refresh
+              </button>
+            </div>
+          </div>
+
+          <!-- TABLE -->
+          <div class="table-card">
+            <div class="table-wrapper">
+              <table id="enquiryTable">
+                <thead>
+                  <tr>
+                    <th>Parent</th>
+
+                    <th>Child</th>
+                    <th>Contact</th>
+                    <th>Branch</th>
+                    <th>Program</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+
+                <tbody id="enquiriesTableBody">
+                  <tr>
+                    <td colspan="8">Loading enquiries...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pagination">
+              <span id="paginationInfo">0 enquiries</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- EXISTING ADMIN SCRIPT -->
+    <script src="js/admin.js"></script>
+
+    <script>
+      "use strict";
+
+      const API_URL = "http://localhost:8080/api/enquiries/all";
+
+      let allEnquiries = [];
+
+      /* ADMIN SESSION */
+      if (sessionStorage.getItem("adminLoggedIn") !== "true") {
+        window.location.href = "admin-login.html";
+      }
+
+      const storedAdminName = sessionStorage.getItem("adminUsername");
+
+      if (storedAdminName) {
+        document.getElementById("adminName").textContent = storedAdminName;
+      }
+
+      /* LOGOUT */
+      document
+        .getElementById("logoutBtn")
+        .addEventListener("click", function () {
+          sessionStorage.removeItem("adminLoggedIn");
+          sessionStorage.removeItem("adminUsername");
+          localStorage.removeItem("mk_admin_token");
+          window.location.href = "admin-login.html";
+        });
+
+      /* LOAD ENQUIRIES */
+      async function loadEnquiries() {
+        const tableBody = document.getElementById("enquiriesTableBody");
+
+        tableBody.innerHTML = `
+          <tr><td colspan="8">Loading enquiries...</td></tr>
+      `;
+
+        try {
+          const response = await fetch(API_URL);
+
+          if (!response.ok) {
+            throw new Error("Server returned HTTP " + response.status);
+          }
+
+          const data = await response.json();
+
+          if (!Array.isArray(data)) {
+            throw new Error("Expected an array of enquiries from the API.");
+          }
+
+          allEnquiries = data;
+
+          updateStatistics();
+          displayEnquiries();
+        } catch (error) {
+          console.error("Error loading enquiries:", error);
+
+          tableBody.innerHTML = `
+              <tr>
+                  <td colspan="8">
+                      Unable to load enquiries. Please check that the backend
+                      is running and the API is accessible.
+                  </td>
+              </tr>
+          `;
+
+          document.getElementById("enquiryCount").textContent =
+            "Unable to load enquiries";
+
+          document.getElementById("paginationInfo").textContent =
+            "Please check the backend connection";
+        }
+      }
+
+      /* UPDATE STATISTICS */
+      function updateStatistics() {
+        document.getElementById("totalEnquiries").textContent =
+          allEnquiries.length;
+
+        document.getElementById("newEnquiries").textContent =
+          allEnquiries.filter(
+            (item) => (item.status || "New") === "New",
+          ).length;
+
+        document.getElementById("followupEnquiries").textContent =
+          allEnquiries.filter((item) => item.status === "Follow-up").length;
+
+        document.getElementById("convertedEnquiries").textContent =
+          allEnquiries.filter((item) => item.status === "Converted").length;
+      }
+
+      /* DISPLAY AND FILTER ENQUIRIES */
+      function displayEnquiries() {
+        const tableBody = document.getElementById("enquiriesTableBody");
+
+        const selectedStatus = document.getElementById("statusFilter").value;
+
+        const selectedBranch = document.getElementById("branchFilter").value;
+
+        const selectedProgram = document.getElementById("programFilter").value;
+
+        const filteredEnquiries = allEnquiries.filter((item) => {
+          const status = item.status || "New";
+          const className = item.className || "";
+
+          const matchesStatus = !selectedStatus || status === selectedStatus;
+
+          const matchesBranch =
+            !selectedBranch || item.branch === selectedBranch;
+
+          const isDaycare = className.toLowerCase().includes("daycare");
+
+          const matchesProgram =
+            !selectedProgram ||
+            (selectedProgram === "Daycare" && isDaycare) ||
+            (selectedProgram === "Preschool" && !isDaycare);
+
+          return matchesStatus && matchesBranch && matchesProgram;
+        });
+
+        tableBody.innerHTML = "";
+
+        document.getElementById("enquiryCount").textContent =
+          filteredEnquiries.length + " enquiries found";
+
+        document.getElementById("paginationInfo").textContent =
+          "Showing " +
+          filteredEnquiries.length +
+          " of " +
+          allEnquiries.length +
+          " enquiries";
+
+        if (filteredEnquiries.length === 0) {
+          const row = document.createElement("tr");
+          const cell = document.createElement("td");
+
+          cell.colSpan = 8;
+          cell.textContent =
+            allEnquiries.length === 0
+              ? "No enquiries have been submitted yet."
+              : "No enquiries match the selected filters.";
+
+          row.appendChild(cell);
+          tableBody.appendChild(row);
+          return;
+        }
+
+        filteredEnquiries.forEach((item) => {
+          const row = document.createElement("tr");
+
+          /* PARENT NAME AND EMAIL */
+          const parentCell = document.createElement("td");
+          const parentInfo = document.createElement("div");
+          parentInfo.className = "parent-info";
+
+          const avatar = document.createElement("div");
+          avatar.className = "table-avatar green-avatar";
+
+          avatar.textContent = (item.parentName || "P")
+            .trim()
+            .split(/\s+/)
+            .map((word) => word.charAt(0))
+            .join("")
+            .substring(0, 2)
+            .toUpperCase();
+
+          const details = document.createElement("div");
+          const parentName = document.createElement("strong");
+          parentName.textContent = item.parentName || "-";
+
+          const email = document.createElement("small");
+          email.textContent = item.email || "-";
+
+          details.append(parentName, email);
+          parentInfo.append(avatar, details);
+          parentCell.appendChild(parentInfo);
+
+          /* CHILD */
+          const childCell = document.createElement("td");
+          childCell.textContent = item.childName || "-";
+
+          /* CONTACT */
+          const contactCell = document.createElement("td");
+          contactCell.textContent = item.mobile || "-";
+
+          /* BRANCH */
+          const branchCell = document.createElement("td");
+          branchCell.textContent = item.branch || "-";
+
+          /* PROGRAM */
+          const programCell = document.createElement("td");
+          const programTag = document.createElement("span");
+
+          const programName = item.className || "-";
+          const daycare = programName.toLowerCase().includes("daycare");
+
+          programTag.className =
+            "program-tag " + (daycare ? "daycare" : "preschool");
+
+          programTag.textContent = programName;
+          programCell.appendChild(programTag);
+
+          /* DATE */
+          const dateCell = document.createElement("td");
+          dateCell.textContent = item.enquiryDate || "-";
+
+          /* STATUS */
+          const statusCell = document.createElement("td");
+          // const statusTag = document.createElement("span");
+          // const status = item.status || "New";
+          const statusSelect = document.createElement("select");
+          statusSelect.className = "status-select";
+
+          const currentStatus = item.status || "New";
+
+          const statusOptions = ["New", "Contacted", "Followup", "Converted"];
+          statusOptions.forEach((statusOption) => {
+            const option = document.createElement("option");
+
+            option.value = statusOption;
+            option.textContent = statusOption;
+
+            if (statusOption === currentStatus) {
+              option.selected = true;
+            }
+
+            statusSelect.appendChild(option);
+          });
+
+          // statusTag.className = "status " + (statusClasses[status] || "new");
+
+          // statusTag.textContent = status;
+          // statusCell.appendChild(statusTag);
+          /* When status is changed */
+          // statusSelect.addEventListener("change", function () {
+          //   const newStatus = this.value;
+
+          //   console.log("Status changed:", {
+          //     enquiryId: item.id,
+          //     oldStatus: currentStatus || "New",
+          //     newStatus: newStatus,
+          //   });
+
+          //   // TEMPORARY FRONTEND UPDATE
+          //   // Backend connection will be added later.
+          //   item.status = newStatus;
+
+          //   updateStatistics();
+          //   // displayEnquiries();
+          // });
+
+          statusSelect.addEventListener("change", async function () {
+            const newStatus = this.value;
+            const oldStatus = item.status || "New";
+
+            console.log("Updating status:", {
+              enquiryId: item.id,
+              oldStatus: oldStatus,
+              newStatus: newStatus,
+            });
+
+            try {
+              const response = await fetch(
+                `http://localhost:8080/api/enquiries/${item.id}`,
+                {
+                  method: "PUT",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    status: newStatus,
+                  }),
+                },
+              );
+
+              if (!response.ok) {
+                throw new Error(
+                  "Failed to update status. HTTP " + response.status,
+                );
+              }
+
+              const updatedEnquiry = await response.json();
+
+              // Update local enquiry
+              item.status = updatedEnquiry.status;
+
+              // Update counters
+              updateStatistics();
+
+              console.log(
+                "Status successfully updated:",
+                updatedEnquiry.status,
+              );
+            } catch (error) {
+              console.error("Error updating status:", error);
+
+              // Put dropdown back to previous status
+              statusSelect.value = oldStatus;
+
+              alert("Unable to update enquiry status. Please try again.");
+            }
+          });
+
+          statusCell.appendChild(statusSelect);
+          /* VIEW BUTTON */
+          const actionCell = document.createElement("td");
+          const viewButton = document.createElement("button");
+
+          viewButton.type = "button";
+          viewButton.className = "view-btn";
+          viewButton.textContent = "View";
+
+          viewButton.addEventListener("click", function () {
+            viewEnquiry(item);
+          });
+
+          actionCell.appendChild(viewButton);
+
+          row.append(
+            parentCell,
+            childCell,
+            contactCell,
+            branchCell,
+            programCell,
+            dateCell,
+            statusCell,
+            actionCell,
+          );
+
+          tableBody.appendChild(row);
+        });
+      }
+
+      /* VIEW ENQUIRY DETAILS */
+      function viewEnquiry(item) {
+        alert(
+          "ENQUIRY DETAILS\n\n" +
+            "Parent: " +
+            (item.parentName || "-") +
+            "\n" +
+            "Child: " +
+            (item.childName || "-") +
+            "\n" +
+            "Mobile: " +
+            (item.mobile || "-") +
+            "\n" +
+            "Email: " +
+            (item.email || "-") +
+            "\n" +
+            "Branch: " +
+            (item.branch || "-") +
+            "\n" +
+            "Program: " +
+            (item.className || "-") +
+            "\n" +
+            "Date: " +
+            (item.enquiryDate || "-") +
+            "\n" +
+            "Status: " +
+            (item.status || "New") +
+            "\n" +
+            "Message: " +
+            (item.message || "-"),
+        );
+      }
+
+      /* FILTER EVENTS */
+      document
+        .getElementById("statusFilter")
+        .addEventListener("change", displayEnquiries);
+
+      document
+        .getElementById("branchFilter")
+        .addEventListener("change", displayEnquiries);
+
+      document
+        .getElementById("programFilter")
+        .addEventListener("change", displayEnquiries);
+
+      /* REFRESH BUTTON */
+      document
+        .getElementById("refreshBtn")
+        .addEventListener("click", loadEnquiries);
+
+      /* EXPORT FILTERED ENQUIRIES TO CSV */
+      document
+        .getElementById("exportBtn")
+        .addEventListener("click", function () {
+          const status = document.getElementById("statusFilter").value;
+
+          const branch = document.getElementById("branchFilter").value;
+
+          const program = document.getElementById("programFilter").value;
+
+          const filtered = allEnquiries.filter((item) => {
+            const itemStatus = item.status || "New";
+            const itemClass = item.className || "";
+            const isDaycare = itemClass.toLowerCase().includes("daycare");
+
+            return (
+              (!status || itemStatus === status) &&
+              (!branch || item.branch === branch) &&
+              aaAs(
+                !program ||
+                  (program === "Daycare" && isDaycare) ||
+                  (program === "Preschool" && !isDaycare),
+              )
+            );
+          });
+
+          const columns = [
+            ["Parent Name", "parentName"],
+            ["Child Name", "childName"],
+            ["Mobile", "mobile"],
+            ["Email", "email"],
+            ["Branch", "branch"],
+            ["Program", "className"],
+            ["Date", "enquiryDate"],
+            ["Status", "status"],
+            ["Message", "message"],
+          ];
+
+          function escapeCSV(value) {
+            let text = String(value ?? "");
+
+            // Prevent spreadsheet formula injection.
+            if (/^[=+\-@\t\r]/.test(text)) {
+              text = "'" + text;
+            }
+
+            return '"' + text.replace(/"/g, '""') + '"';
+          }
+
+          const csvRows = [
+            columns.map((column) => escapeCSV(column[0])).join(","),
+            ...filtered.map((item) =>
+              columns
+                .map((column) => {
+                  const value =
+                    column[1] === "status"
+                      ? item.status || "New"
+                      : item[column[1]];
+
+                  return escapeCSV(value);
+                })
+                .join(","),
+            ),
+          ];
+
+          const blob = new Blob(["\uFEFF" + csvRows.join("\r\n")], {
+            type: "text/csv;charset=utf-8;",
+          });
+
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+
+          link.href = url;
+          link.download = "millennium-kidss-enquiries.csv";
+
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+
+          URL.revokeObjectURL(url);
+        });
+
+      /* INITIAL LOAD */
+      loadEnquiries();
+    </script>
+  </body>
+</html>

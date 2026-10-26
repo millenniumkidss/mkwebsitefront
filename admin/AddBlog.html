@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Add Blog | Millennium Kidss Admin</title>
+
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <img src="../img/logo-3.png" alt="Millennium Kidss" />
+        </div>
+
+        <div class="sidebar-title">ADMIN PANEL</div>
+
+        <nav class="sidebar-nav">
+          <a href="admin-dashboard.html" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="enquiries.html" class="nav-item">
+            <span class="nav-icon">📩</span>
+            <span>Enquiries</span>
+          </a>
+
+          <a href="Review.html" class="nav-item">
+            <span class="nav-icon">⭐</span>
+            <span>Reviews</span>
+          </a>
+
+          <a href="blog.html" class="nav-item">
+            <span class="nav-icon">📝</span>
+            <span>Blogs</span>
+          </a>
+
+          <a href="admin-gallery.html" class="nav-item">
+            <span class="nav-icon">🖼️</span>
+            <span>Gallery</span>
+          </a>
+
+          <a href="admin-videos.html" class="nav-item">
+            <span class="nav-icon">🎥</span>
+            <span>Videos</span>
+          </a>
+
+          <a href="admin-announcements.html" class="nav-item">
+            <span class="nav-icon">📢</span>
+            <span>Announcements</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="school-badge">
+            <div class="badge-icon">🌱</div>
+
+            <div>
+              <strong>Millennium Kidss</strong>
+              <small>Admin Portal</small>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- =====================================================
+     MAIN AREA
+===================================================== -->
+
+      <div class="dashboard-wrapper">
+        <!-- HEADER -->
+
+        <header class="top-header">
+          <div class="header-left">
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+
+            <div>
+              <span class="header-label">ADMIN PANEL</span>
+              <h1>Dashboard</h1>
+            </div>
+          </div>
+
+          <div class="header-right">
+            <div class="notification">
+              🔔
+              <span class="notification-dot"></span>
+            </div>
+
+            <div class="admin-profile">
+              <div class="admin-avatar">A</div>
+
+              <div class="admin-info">
+                <strong id="adminName">Admin</strong>
+                <span>Administrator</span>
+              </div>
+            </div>
+
+            <button class="logout-btn" onclick="logout()">Logout</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <div class="blog-editor-layout">
+            <!-- EDITOR -->
+
+            <div class="editor-main">
+              <div class="editor-card">
+                <div class="form-group">
+                  <label> Blog Title </label>
+
+                  <input
+                    type="text"
+                    id="blogTitle"
+                    placeholder="Enter blog title"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label> Blog Content </label>
+
+                  <textarea
+                    id="blogContent"
+                    rows="18"
+                    placeholder="Write your blog content here..."
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label> Excerpt </label>
+
+                  <textarea
+                    rows="4"
+                    placeholder="Short description of the blog..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- SEO -->
+
+              <div class="editor-card">
+                <div class="section-title">
+                  <div>
+                    <h3>SEO Settings</h3>
+
+                    <p>Improve how this article appears in search engines.</p>
+                  </div>
+
+                  <span> 🔎 </span>
+                </div>
+
+                <div class="form-group">
+                  <label> SEO Title </label>
+
+                  <input type="text" placeholder="SEO title" />
+                </div>
+
+                <div class="form-group">
+                  <label> Meta Description </label>
+
+                  <textarea
+                    rows="4"
+                    placeholder="SEO meta description"
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label> Focus Keyword </label>
+
+                  <input
+                    type="text"
+                    placeholder="Example: preschool in Nagpur"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT PANEL -->
+
+            <aside class="editor-sidebar">
+              <div class="editor-card">
+                <h3>Publish</h3>
+
+                <div class="publish-row">
+                  <span> Status </span>
+
+                  <select id="blogStatus">
+                    <option value="draft">Draft</option>
+
+                    <option value="published">Published</option>
+                  </select>
+                </div>
+
+                <div class="publish-buttons">
+                  <button class="save-draft-btn" onclick="saveBlog('draft')">
+                    Save Draft
+                  </button>
+
+                  <button class="publish-btn" onclick="saveBlog('published')">
+                    Publish
+                  </button>
+                </div>
+              </div>
+
+              <div class="editor-card">
+                <h3>Blog Details</h3>
+
+                <div class="form-group">
+                  <label> Category </label>
+
+                  <select>
+                    <option>Parenting</option>
+
+                    <option>Preschool</option>
+
+                    <option>Daycare</option>
+
+                    <option>Activities</option>
+
+                    <option>MK Updates</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label> Author </label>
+
+                  <input type="text" value="Millennium Kidss" />
+                </div>
+
+                <!-- <div class="form-group">
+                  <label> Slug </label>
+
+                  <input
+                    type="text"
+                    id="blogSlug"
+                    placeholder="blog-url-slug"
+                  />
+                </div> -->
+              </div>
+
+              <div class="editor-card">
+                <h3>Featured Image</h3>
+
+                <label class="image-upload">
+                  <span> 🖼️ </span>
+
+                  <strong> Upload Image </strong>
+
+                  <small> JPG, PNG or WEBP </small>
+
+                  <input type="file" accept="image/*" />
+                </label>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+
+    <script>
+      const BLOG_API = "http://localhost:8080/api/blogs/upload";
+
+      // Save Draft or Publish
+      async function saveBlog(status) {
+        const title = document.getElementById("blogTitle").value.trim();
+        const content = document.getElementById("blogContent").value.trim();
+
+        // Excerpt textarea currently has no ID in your HTML.
+        const excerptField = document.querySelector(
+          '.editor-main .editor-card:nth-child(1) textarea[rows="4"]',
+        );
+        const shortDescription = excerptField ? excerptField.value.trim() : "";
+
+        const category = document.querySelector(
+          ".editor-sidebar .editor-card:nth-child(2) select",
+        ).value;
+
+        const author = document
+          .querySelector(
+            '.editor-sidebar .editor-card:nth-child(2) input[type="text"]',
+          )
+          .value.trim();
+
+        const imageInput = document.querySelector(
+          '.editor-sidebar input[type="file"]',
+        );
+
+        const image = imageInput.files[0];
+
+        if (!title || !content || !shortDescription) {
+          alert("Please enter the blog title, content and excerpt.");
+          return;
+        }
+
+        if (!image) {
+          alert("Please select a featured image.");
+          return;
+        }
+
+        const formData = new FormData();
+        formData.append("title", title);
+        formData.append("category", category);
+        formData.append("shortDescription", shortDescription);
+        formData.append("content", content);
+        formData.append("author", author || "Millennium Kidss");
+        formData.append("published", status === "published" ? "true" : "false");
+        formData.append("image", image);
+
+        try {
+          const response = await fetch(BLOG_API, {
+            method: "POST",
+            body: formData,
+          });
+
+          if (!response.ok) {
+            const errorMessage = await response.text();
+            throw new Error(errorMessage || "Could not save blog.");
+          }
+
+          alert(
+            status === "published"
+              ? "Blog published successfully!"
+              : "Blog saved as draft!",
+          );
+
+          window.location.href = "blog.html";
+        } catch (error) {
+          console.error("Blog save failed:", error);
+          alert(
+            "Could not save the blog. Make sure Spring Boot is running.\n" +
+              error.message,
+          );
+        }
+      }
+
+      function logout() {
+        localStorage.removeItem("mk_admin_token");
+        window.location.href = "login.html";
+      }
+    </script>
+  </body>
+</html>

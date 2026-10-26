@@ -1,0 +1,1412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Reviews | Millennium Kidss Admin</title>
+
+    <link rel="stylesheet" href="../admin/css/admin.css" />
+    <link rel="stylesheet" href="../admin/css/review.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+
+  <body>
+    <div class="admin-layout">
+      <!-- ================= SIDEBAR ================= -->
+
+      <!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <img src="../img/logo-3.png" alt="Millennium Kidss" />
+        </div>
+
+        <div class="sidebar-title">ADMIN PANEL</div>
+
+        <nav class="sidebar-nav">
+          <a href="admin-dashboard.html" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="enquiries.html" class="nav-item">
+            <span class="nav-icon">📩</span>
+            <span>Enquiries</span>
+          </a>
+
+          <a href="Review.html" class="nav-item">
+            <span class="nav-icon">⭐</span>
+            <span>Reviews</span>
+          </a>
+
+          <a href="blog.html" class="nav-item">
+            <span class="nav-icon">📝</span>
+            <span>Blogs</span>
+          </a>
+
+          <a href="admin-gallery.html" class="nav-item">
+            <span class="nav-icon">🖼️</span>
+            <span>Gallery</span>
+          </a>
+
+          <a href="admin-videos.html" class="nav-item">
+            <span class="nav-icon">🎥</span>
+            <span>Videos</span>
+          </a>
+
+          <a href="admin-announcements.html" class="nav-item">
+            <span class="nav-icon">📢</span>
+            <span>Announcements</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="school-badge">
+            <div class="badge-icon">🌱</div>
+
+            <div>
+              <strong>Millennium Kidss</strong>
+              <small>Admin Portal</small>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- =====================================================
+     MAIN AREA
+===================================================== -->
+
+      <div class="dashboard-wrapper">
+        <!-- HEADER -->
+
+        <header class="top-header">
+          <div class="header-left">
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+
+            <div>
+              <span class="header-label">ADMIN PANEL</span>
+              <h1>Dashboard</h1>
+            </div>
+          </div>
+
+          <div class="header-right">
+            <div class="notification">
+              🔔
+              <span class="notification-dot"></span>
+            </div>
+
+            <div class="admin-profile">
+              <div class="admin-avatar">A</div>
+
+              <div class="admin-info">
+                <strong id="adminName">Admin</strong>
+                <span>Administrator</span>
+              </div>
+            </div>
+
+            <button class="logout-btn" onclick="logout()">Logout</button>
+          </div>
+        </header>
+
+        <!-- ================= PAGE CONTENT ================= -->
+
+        <section class="page-content">
+          <!-- ================= RATING OVERVIEW ================= -->
+
+          <div class="review-overview">
+            <div class="rating-summary">
+              <span class="big-rating"> 4.9 </span>
+
+              <div>
+                <div class="stars">★★★★★</div>
+
+                <p>Based on 86 reviews</p>
+              </div>
+            </div>
+
+            <div class="rating-bars">
+              <div>
+                <span>5 ★</span>
+
+                <div class="rating-bar">
+                  <i style="width: 92%"></i>
+                </div>
+
+                <small>79</small>
+              </div>
+
+              <div>
+                <span>4 ★</span>
+
+                <div class="rating-bar">
+                  <i style="width: 40%"></i>
+                </div>
+
+                <small>5</small>
+              </div>
+
+              <div>
+                <span>3 ★</span>
+
+                <div class="rating-bar">
+                  <i style="width: 15%"></i>
+                </div>
+
+                <small>2</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= REVIEW TOOLBAR ================= -->
+
+          <div class="review-toolbar">
+            <div>
+              <h2>Parent Reviews</h2>
+
+              <p>Add and manage testimonials displayed on your website.</p>
+            </div>
+
+            <div class="review-toolbar-actions">
+              <select id="reviewStatusFilter">
+                <option value="all">All Reviews</option>
+
+                <option value="published">Published</option>
+
+                <option value="pending">Pending</option>
+
+                <option value="hidden">Hidden</option>
+              </select>
+
+              <!-- ADD REVIEW BUTTON -->
+
+              <button class="add-review-btn" onclick="openReviewModal()">
+                <span>＋</span>
+
+                Add New Review
+              </button>
+            </div>
+          </div>
+
+          <!-- ================= REVIEWS GRID ================= -->
+
+          <div class="reviews-grid" id="reviewsGrid">
+            <!-- REVIEW 1 -->
+
+            <!-- <article
+                    class="review-card"
+                    data-status="published"
+                    data-name="Priya Sharma"
+                >
+
+                    <div class="review-card-top">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                PS
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Priya Sharma
+                                </strong>
+
+                                <small>
+                                    Narendra Nagar
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="review-date">
+                            01 Oct 2026
+                        </span>
+
+                    </div>
+
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+
+                    <p>
+                        We are very happy with the learning environment.
+                        The teachers are caring and my child enjoys coming
+                        to Millennium Kidss every day.
+                    </p>
+
+
+                    <div class="review-footer">
+
+                        <span class="published-badge">
+                            Published
+                        </span>
+
+                        <div class="review-actions">
+
+                            <button
+                                class="edit-btn"
+                                onclick="editReview(this)"
+                            >
+                                Edit
+                            </button>
+
+                            <button
+                                class="delete-btn"
+                                onclick="deleteReview(this)"
+                            >
+                                Delete
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- REVIEW 2 -->
+
+            <!-- <article
+                    class="review-card blue-card"
+                    data-status="published"
+                    data-name="Rahul Mehta"
+                >
+
+                    <div class="review-card-top">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                RM
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Rahul Mehta
+                                </strong>
+
+                                <small>
+                                    Khamla
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="review-date">
+                            28 Sep 2026
+                        </span>
+
+                    </div>
+
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+
+                    <p>
+                        The daycare team is very supportive.
+                        We receive regular updates about our child's
+                        activities, meals and routine.
+                    </p>
+
+
+                    <div class="review-footer">
+
+                        <span class="published-badge">
+                            Published
+                        </span>
+
+                        <div class="review-actions">
+
+                            <button
+                                class="edit-btn"
+                                onclick="editReview(this)"
+                            >
+                                Edit
+                            </button>
+
+                            <button
+                                class="delete-btn"
+                                onclick="deleteReview(this)"
+                            >
+                                Delete
+                            </button>
+
+                        </div>
+
+                    </div> -->
+
+            <!-- </article>  -->
+
+            <!-- REVIEW 3 -->
+            <!-- 
+                <article
+                    class="review-card yellow-card"
+                    data-status="pending"
+                    data-name="Anita Nair"
+                >
+
+                    <div class="review-card-top">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                AN
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Anita Nair
+                                </strong>
+
+                                <small>
+                                    Manewada
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="review-date">
+                            27 Sep 2026
+                        </span>
+
+                    </div>
+
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+
+                    <p>
+                        Wonderful teachers and a very welcoming atmosphere.
+                        The activities are creative and engaging for children.
+                    </p>
+
+
+                    <div class="review-footer">
+
+                        <span class="pending-badge">
+                            Pending
+                        </span>
+
+                        <div class="review-actions">
+
+                            <button
+                                class="approve-btn"
+                                onclick="approveReview(this)"
+                            >
+                                Approve
+                            </button>
+
+                            <button
+                                class="hide-btn"
+                                onclick="hideReview(this)"
+                            >
+                                Hide
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article> -->
+
+            <!-- REVIEW 4 -->
+
+            <!-- <article
+                    class="review-card pink-card"
+                    data-status="published"
+                    data-name="Shweta Kulkarni"
+                >
+
+                    <div class="review-card-top">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                SK
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Shweta Kulkarni
+                                </strong>
+
+                                <small>
+                                    Medical
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="review-date">
+                            24 Sep 2026
+                        </span>
+
+                    </div>
+
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+
+                    <p>
+                        The preschool curriculum is thoughtfully planned.
+                        My daughter has become more confident with speaking
+                        and participating in activities.
+                    </p>
+
+
+                    <div class="review-footer">
+
+                        <span class="published-badge">
+                            Published
+                        </span>
+
+                        <div class="review-actions">
+
+                            <button
+                                class="edit-btn"
+                                onclick="editReview(this)"
+                            >
+                                Edit
+                            </button>
+
+                            <button
+                                class="delete-btn"
+                                onclick="deleteReview(this)"
+                            >
+                                Delete
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article> -->
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- ================================================= -->
+    <!-- ADD / EDIT REVIEW MODAL -->
+    <!-- ================================================= -->
+
+    <div class="review-modal-overlay" id="reviewModal">
+      <div class="review-modal">
+        <div class="modal-header">
+          <div>
+            <h2 id="modalTitle">Add New Review</h2>
+
+            <p>Add a parent testimonial to your website.</p>
+          </div>
+
+          <button class="modal-close" onclick="closeReviewModal()">×</button>
+        </div>
+
+        <form id="reviewForm" onsubmit="saveReview(event)">
+          <!-- NAME -->
+
+          <div class="form-group">
+            <label> Parent Name </label>
+
+            <input
+              type="text"
+              id="parentName"
+              placeholder="Enter parent name"
+              required
+            />
+          </div>
+
+          <!-- BRANCH -->
+
+          <!-- <div class="form-group">
+
+                <label>
+                    Branch
+                </label>
+
+                <select
+                    id="branch"
+                    required
+                >
+
+                    <option value="">
+                        Select Branch
+                    </option>
+
+                    <option>
+                        Khamla
+                    </option>
+
+                    <option>
+                        Narendra Nagar
+                    </option>
+
+                    <option>
+                        Nandanvan
+                    </option>
+
+                    <option>
+                        Medical
+                    </option>
+
+                    <option>
+                        Manewada
+                    </option>
+
+                    <option>
+                        HCLTech Daycare
+                    </option>
+
+                </select>
+
+            </div> -->
+
+          <!-- RATING -->
+
+          <div class="form-group">
+            <label> Rating </label>
+
+            <div class="rating-selector" id="ratingSelector">
+              <button type="button" onclick="selectRating(1)">★</button>
+
+              <button type="button" onclick="selectRating(2)">★</button>
+
+              <button type="button" onclick="selectRating(3)">★</button>
+
+              <button type="button" onclick="selectRating(4)">★</button>
+
+              <button type="button" onclick="selectRating(5)" class="selected">
+                ★
+              </button>
+            </div>
+
+            <input type="hidden" id="rating" value="5" />
+          </div>
+
+          <!-- REVIEW -->
+
+          <div class="form-group">
+            <label> Review </label>
+
+            <textarea
+              id="reviewText"
+              rows="5"
+              placeholder="Write the parent's review..."
+              required
+            ></textarea>
+          </div>
+
+          <!-- STATUS -->
+
+          <div class="form-group">
+            <label> Status </label>
+
+            <select id="reviewStatus">
+              <option value="published">Published</option>
+
+              <option value="pending">Pending</option>
+
+              <option value="hidden">Hidden</option>
+            </select>
+          </div>
+
+          <!-- BUTTONS -->
+
+          <div class="modal-actions">
+            <button
+              type="button"
+              class="cancel-btn"
+              onclick="closeReviewModal()"
+            >
+              Cancel
+            </button>
+
+            <button type="submit" class="save-review-btn">Save Review</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+
+    <script>
+      // let editingCard = null;
+
+      // /* ================================================
+      //    OPEN MODAL
+      // ================================================ */
+
+      // function openReviewModal() {
+
+      //     editingCard = null;
+
+      //     document.getElementById("modalTitle").textContent =
+      //         "Add New Review";
+
+      //     document.getElementById("reviewForm").reset();
+
+      //     document.getElementById("rating").value = 5;
+
+      //     document
+      //         .querySelectorAll("#ratingSelector button")
+      //         .forEach(btn => btn.classList.remove("selected"));
+
+      //     document
+      //         .querySelector("#ratingSelector button:last-child")
+      //         .classList.add("selected");
+
+      //     document
+      //         .getElementById("reviewModal")
+      //         .classList.add("show");
+      // }
+
+      // /* ================================================
+      //    CLOSE MODAL
+      // ================================================ */
+
+      // function closeReviewModal() {
+
+      //     document
+      //         .getElementById("reviewModal")
+      //         .classList.remove("show");
+
+      // }
+
+      // /* ================================================
+      //    SELECT RATING
+      // ================================================ */
+
+      // function selectRating(rating) {
+
+      //     document.getElementById("rating").value = rating;
+
+      //     const buttons =
+      //         document.querySelectorAll(
+      //             "#ratingSelector button"
+      //         );
+
+      //     buttons.forEach((button, index) => {
+
+      //         button.classList.toggle(
+      //             "selected",
+      //             index < rating
+      //         );
+
+      //     });
+
+      // }
+
+      // /* ================================================
+      //    SAVE REVIEW
+      // ================================================ */
+
+      // function saveReview(event) {
+
+      //     event.preventDefault();
+
+      //     const name =
+      //         document.getElementById("parentName").value.trim();
+
+      //     const branch =
+      //         document.getElementById("branch").value;
+
+      //     const rating =
+      //         document.getElementById("rating").value;
+
+      //     const review =
+      //         document.getElementById("reviewText").value.trim();
+
+      //     const status =
+      //         document.getElementById("reviewStatus").value;
+
+      //     if (!name || !branch || !review) {
+
+      //         alert("Please fill all required fields.");
+
+      //         return;
+
+      //     }
+
+      //     /*
+      //      * EDIT EXISTING REVIEW
+      //      */
+
+      //     if (editingCard) {
+
+      //         editingCard.querySelector(
+      //             ".review-user strong"
+      //         ).textContent = name;
+
+      //         editingCard.querySelector(
+      //             ".review-user small"
+      //         ).textContent = branch;
+
+      //         editingCard.querySelector(
+      //             ".review-card > p"
+      //         ).textContent = review;
+
+      //         editingCard.querySelector(
+      //             ".stars"
+      //         ).textContent = "★".repeat(rating);
+
+      //         editingCard.dataset.status = status;
+
+      //         closeReviewModal();
+
+      //         alert("Review updated successfully.");
+
+      //         return;
+
+      //     }
+
+      //     /*
+      //      * CREATE NEW REVIEW
+      //      */
+
+      //     const initials =
+      //         name
+      //             .split(" ")
+      //             .map(word => word[0])
+      //             .join("")
+      //             .substring(0, 2)
+      //             .toUpperCase();
+
+      //     const today =
+      //         new Date().toLocaleDateString(
+      //             "en-GB",
+      //             {
+      //                 day: "2-digit",
+      //                 month: "short",
+      //                 year: "numeric"
+      //             }
+      //         );
+
+      //     const card =
+      //         document.createElement("article");
+
+      //     card.className = "review-card";
+
+      //     card.dataset.status = status;
+
+      //     card.dataset.name = name;
+
+      //     card.innerHTML = `
+
+      //         <div class="review-card-top">
+
+      //             <div class="review-user">
+
+      //                 <div class="review-avatar">
+      //                     ${initials}
+      //                 </div>
+
+      //                 <div>
+
+      //                     <strong>
+      //                         ${name}
+      //                     </strong>
+
+      //                     <small>
+      //                         ${branch}
+      //                     </small>
+
+      //                 </div>
+
+      //             </div>
+
+      //             <span class="review-date">
+      //                 ${today}
+      //             </span>
+
+      //         </div>
+
+      //         <div class="stars">
+      //             ${"★".repeat(rating)}
+      //         </div>
+
+      //         <p>
+      //             ${review}
+      //         </p>
+
+      //         <div class="review-footer">
+
+      //             <span class="${status}-badge">
+      //                 ${status.charAt(0).toUpperCase() + status.slice(1)}
+      //             </span>
+
+      //             <div class="review-actions">
+
+      //                 <button
+      //                     class="edit-btn"
+      //                     onclick="editReview(this)"
+      //                 >
+      //                     Edit
+      //                 </button>
+
+      //                 <button
+      //                     class="delete-btn"
+      //                     onclick="deleteReview(this)"
+      //                 >
+      //                     Delete
+      //                 </button>
+
+      //             </div>
+
+      //         </div>
+
+      //     `;
+
+      //     document
+      //         .getElementById("reviewsGrid")
+      //         .prepend(card);
+
+      //     closeReviewModal();
+
+      //     alert("Review added successfully.");
+
+      // }
+
+      // /* ================================================
+      //    EDIT REVIEW
+      // ================================================ */
+
+      // function editReview(button) {
+
+      //     editingCard =
+      //         button.closest(".review-card");
+
+      //     const name =
+      //         editingCard.querySelector(
+      //             ".review-user strong"
+      //         ).textContent.trim();
+
+      //     const branch =
+      //         editingCard.querySelector(
+      //             ".review-user small"
+      //         ).textContent.trim();
+
+      //     const review =
+      //         editingCard.querySelector(
+      //             ".review-card > p"
+      //         ).textContent.trim();
+
+      //     const stars =
+      //         editingCard.querySelector(
+      //             ".stars"
+      //         ).textContent.trim();
+
+      //     const rating =
+      //         stars.length;
+
+      //     document.getElementById(
+      //         "modalTitle"
+      //     ).textContent =
+      //         "Edit Review";
+
+      //     document.getElementById(
+      //         "parentName"
+      //     ).value = name;
+
+      //     document.getElementById(
+      //         "branch"
+      //     ).value = branch;
+
+      //     document.getElementById(
+      //         "reviewText"
+      //     ).value = review;
+
+      //     document.getElementById(
+      //         "rating"
+      //     ).value = rating;
+
+      //     selectRating(rating);
+
+      //     document.getElementById(
+      //         "reviewStatus"
+      //     ).value =
+      //         editingCard.dataset.status;
+
+      //     document
+      //         .getElementById("reviewModal")
+      //         .classList.add("show");
+
+      // }
+
+      // /* ================================================
+      //    DELETE REVIEW
+      // ================================================ */
+
+      // function deleteReview(button) {
+
+      //     const card =
+      //         button.closest(".review-card");
+
+      //     const name =
+      //         card.querySelector(
+      //             ".review-user strong"
+      //         ).textContent;
+
+      //     if (
+      //         confirm(
+      //             `Are you sure you want to delete the review from ${name}?`
+      //         )
+      //     ) {
+
+      //         card.remove();
+
+      //     }
+
+      // }
+
+      // /* ================================================
+      //    APPROVE REVIEW
+      // ================================================ */
+
+      // function approveReview(button) {
+
+      //     const card =
+      //         button.closest(".review-card");
+
+      //     card.dataset.status =
+      //         "published";
+
+      //     const badge =
+      //         card.querySelector(
+      //             ".pending-badge"
+      //         );
+
+      //     badge.className =
+      //         "published-badge";
+
+      //     badge.textContent =
+      //         "Published";
+
+      //     button.remove();
+
+      //     alert("Review approved.");
+
+      // }
+
+      // /* ================================================
+      //    HIDE REVIEW
+      // ================================================ */
+
+      // function hideReview(button) {
+
+      //     const card =
+      //         button.closest(".review-card");
+
+      //     card.dataset.status =
+      //         "hidden";
+
+      //     const badge =
+      //         card.querySelector(
+      //             ".pending-badge"
+      //         );
+
+      //     badge.className =
+      //         "hidden-badge";
+
+      //     badge.textContent =
+      //         "Hidden";
+
+      //     button.remove();
+
+      // }
+
+      // /* ================================================
+      //    SEARCH REVIEWS
+      // ================================================ */
+
+      // document
+      //     .getElementById("reviewSearch")
+      //     .addEventListener(
+      //         "input",
+      //         function () {
+
+      //             const search =
+      //                 this.value.toLowerCase();
+
+      //             document
+      //                 .querySelectorAll(".review-card")
+      //                 .forEach(card => {
+
+      //                     const text =
+      //                         card.textContent.toLowerCase();
+
+      //                     card.style.display =
+      //                         text.includes(search)
+      //                             ? ""
+      //                             : "none";
+
+      //                 });
+
+      //         }
+      //     );
+
+      // /* ================================================
+      //    FILTER REVIEWS
+      // ================================================ */
+
+      // document
+      //     .getElementById("reviewStatusFilter")
+      //     .addEventListener(
+      //         "change",
+      //         function () {
+
+      //             const selected =
+      //                 this.value;
+
+      //             document
+      //                 .querySelectorAll(".review-card")
+      //                 .forEach(card => {
+
+      //                     if (
+      //                         selected === "all" ||
+      //                         card.dataset.status === selected
+      //                     ) {
+
+      //                         card.style.display = "";
+
+      //                     } else {
+
+      //                         card.style.display = "none";
+
+      //                     }
+
+      //                 });
+
+      //         }
+      //     );
+
+      // /* ================================================
+      //    LOGOUT
+      // ================================================ */
+
+      // function logout() {
+
+      //     localStorage.removeItem(
+      //         "mk_admin_token"
+      //     );
+
+      //     window.location.href =
+      //         "login.html";
+
+      // }
+
+      // /* ================================================
+      //    CLOSE MODAL ON OUTSIDE CLICK
+      // ================================================ */
+
+      // document
+      //     .getElementById("reviewModal")
+      //     .addEventListener(
+      //         "click",
+      //         function (event) {
+
+      //             if (
+      //                 event.target === this
+      //             ) {
+
+      //                 closeReviewModal();
+
+      //             }
+
+      //         }
+      //     );
+
+      const API_URL = "http://localhost:8080/api/reviews";
+
+      let editingReviewId = null;
+      let selectedRating = 5;
+      let allReviews = [];
+
+      // Load reviews from MySQL
+      async function loadReviews() {
+        try {
+          const response = await fetch(API_URL);
+
+          if (!response.ok) {
+            throw new Error("Could not load reviews");
+          }
+
+          allReviews = await response.json();
+          renderReviews();
+        } catch (error) {
+          console.error("Loading reviews failed:", error);
+          alert("Could not load reviews. Check that Spring Boot is running.");
+        }
+      }
+
+      // Display database reviews
+      function renderReviews() {
+        const grid = document.getElementById("reviewsGrid");
+        const filter = document.getElementById("reviewStatusFilter").value;
+
+        grid.replaceChildren();
+
+        const filtered = allReviews.filter((review) => {
+          const status = review.published === true ? "published" : "pending";
+          return filter === "all" || filter === status;
+        });
+
+        filtered.forEach((review) => {
+          const status = review.published === true ? "published" : "pending";
+          const card = document.createElement("article");
+          card.className = "review-card";
+          card.dataset.status = status;
+
+          const top = document.createElement("div");
+          top.className = "review-card-top";
+
+          const user = document.createElement("div");
+          user.className = "review-user";
+
+          const avatar = document.createElement("div");
+          avatar.className = "review-avatar";
+          avatar.textContent = (review.parentName || "?")
+            .split(" ")
+            .map((word) => word[0] || "")
+            .join("")
+            .substring(0, 2)
+            .toUpperCase();
+
+          const identity = document.createElement("div");
+          const name = document.createElement("strong");
+          name.textContent = review.parentName || "Parent";
+          const branch = document.createElement("small");
+          branch.textContent = "Parent Review";
+          identity.append(name, branch);
+          user.append(avatar, identity);
+
+          const date = document.createElement("span");
+          date.className = "review-date";
+          date.textContent = "";
+          top.append(user, date);
+
+          const stars = document.createElement("div");
+          stars.className = "stars";
+          stars.textContent = "★".repeat(
+            Math.max(0, Math.min(5, review.rating || 0)),
+          );
+
+          const text = document.createElement("p");
+          text.textContent = review.reviewText || "";
+
+          const footer = document.createElement("div");
+          footer.className = "review-footer";
+
+          const badge = document.createElement("span");
+          badge.className = status + "-badge";
+          badge.textContent = status === "published" ? "Published" : "Pending";
+
+          const actions = document.createElement("div");
+          actions.className = "review-actions";
+
+          const edit = document.createElement("button");
+          edit.className = "edit-btn";
+          edit.textContent = "Edit";
+          edit.onclick = () => editReview(review.id);
+
+          const toggle = document.createElement("button");
+          toggle.className =
+            status === "published" ? "hide-btn" : "approve-btn";
+          toggle.textContent = status === "published" ? "Hide" : "Approve";
+          toggle.onclick = () =>
+            setReviewStatus(review.id, status !== "published");
+
+          const del = document.createElement("button");
+          del.className = "delete-btn";
+          del.textContent = "Delete";
+          del.onclick = () => deleteReview(review.id);
+
+          actions.append(edit, toggle, del);
+          footer.append(badge, actions);
+          card.append(top, stars, text, footer);
+          grid.append(card);
+        });
+      }
+
+      // Open form for a new review
+      function openReviewModal() {
+        editingReviewId = null;
+        document.getElementById("modalTitle").textContent = "Add New Review";
+        document.getElementById("reviewForm").reset();
+        document.getElementById("rating").value = 5;
+        selectRating(5);
+        document.getElementById("reviewStatus").value = "pending";
+        document.getElementById("reviewModal").classList.add("show");
+      }
+
+      function closeReviewModal() {
+        document.getElementById("reviewModal").classList.remove("show");
+      }
+
+      function selectRating(rating) {
+        selectedRating = rating;
+        document.getElementById("rating").value = rating;
+
+        document
+          .querySelectorAll("#ratingSelector button")
+          .forEach((button, index) => {
+            button.classList.toggle("selected", index < rating);
+          });
+      }
+
+      // Save a new review or update an existing one
+      async function saveReview(event) {
+        event.preventDefault();
+
+        const parentName = document.getElementById("parentName").value.trim();
+        // const branch = document.getElementById("branch").value;
+        const reviewText = document.getElementById("reviewText").value.trim();
+        const rating = Number(document.getElementById("rating").value);
+        const status = document.getElementById("reviewStatus").value;
+
+        if (!parentName || !reviewText) {
+          alert("Please fill all required fields.");
+          return;
+        }
+
+        const review = {
+          parentName: parentName,
+          reviewText: reviewText,
+          rating: rating,
+          published: status === "published",
+        };
+
+        try {
+          const url =
+            editingReviewId === null
+              ? API_URL
+              : `${API_URL}/${editingReviewId}`;
+
+          const response = await fetch(url, {
+            method: editingReviewId === null ? "POST" : "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(review),
+          });
+
+          if (!response.ok) {
+            throw new Error(await response.text());
+          }
+
+          closeReviewModal();
+          await loadReviews();
+          alert("Review saved to the database successfully.");
+        } catch (error) {
+          console.error("Saving review failed:", error);
+          alert("Could not save review. Check the backend and console errors.");
+        }
+      }
+
+      // Edit an existing database review
+      function editReview(id) {
+        const review = allReviews.find((item) => item.id === id);
+        if (!review) {
+          alert("Review not found.");
+          return;
+        }
+
+        editingReviewId = review.id;
+        document.getElementById("modalTitle").textContent = "Edit Review";
+        document.getElementById("parentName").value = review.parentName || "";
+        // document.getElementById("branch").value = "";
+        document.getElementById("reviewText").value = review.reviewText || "";
+
+        // document.getElementById("rating").value = review.rating || 5;
+        // selectRating(review.rating || 5);
+        // document.getElementById("reviewStatus").value =
+        //     review.published === true ? "published" : "pending";
+
+        // document.getElementById("reviewModal").classList.add("show");
+
+        const rating = review.rating || 5;
+        document.getElementById("rating").value = rating;
+        selectRating(rating);
+
+        document.getElementById("reviewStatus").value =
+          review.published === true ? "published" : "pending";
+
+        document.getElementById("reviewModal").classList.add("show");
+      }
+
+      // Publish or unpublish a review in MySQL
+      async function setReviewStatus(id, published) {
+        const review = allReviews.find((item) => item.id === id);
+        if (!review) return;
+
+        try {
+          const response = await fetch(`${API_URL}/${id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              parentName: review.parentName,
+              reviewText: review.reviewText,
+              rating: review.rating,
+              published,
+            }),
+          });
+
+          if (!response.ok) throw new Error("Status update failed");
+
+          await loadReviews();
+        } catch (error) {
+          console.error(error);
+          alert("Could not update review status.");
+        }
+      }
+
+      // Delete a review from MySQL
+      async function deleteReview(id) {
+        const review = allReviews.find((item) => item.id === id);
+        if (!review || !confirm(`Delete the review from ${review.parentName}?`))
+          return;
+
+        try {
+          const response = await fetch(`${API_URL}/${id}`, {
+            method: "DELETE",
+          });
+          if (!response.ok) throw new Error("Delete failed");
+
+          await loadReviews();
+          alert("Review deleted.");
+        } catch (error) {
+          console.error(error);
+          alert("Could not delete review.");
+        }
+      }
+
+      // Keep the existing filter working
+      document
+        .getElementById("reviewStatusFilter")
+        .addEventListener("change", renderReviews);
+
+      // Load existing database records when the page opens
+      loadReviews();
+    </script>
+  </body>
+</html>

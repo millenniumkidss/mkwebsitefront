@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Blog | Millennium Kidss</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f7f6;
+        color: #333;
+      }
+
+      /* MAIN WRAPPER */
+      .blog-details-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 0 20px;
+      }
+
+      /* BLOG CARD */
+      .blog-details-card {
+        background: #ffffff;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      /* IMAGE */
+      .blog-details-image {
+        width: 100%;
+        height: 420px;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      /* CONTENT */
+      .blog-details-content {
+        padding: 40px 50px 50px;
+      }
+
+      /* CATEGORY */
+      .blog-category {
+        display: inline-block;
+        background: #199f61;
+        color: #ffffff;
+        padding: 7px 16px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 18px;
+      }
+
+      /* TITLE */
+      .blog-title {
+        margin: 0 0 15px;
+        font-size: 38px;
+        line-height: 1.25;
+        color: #222;
+      }
+
+      /* META */
+      .blog-meta {
+        color: #777;
+        font-size: 14px;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eeeeee;
+      }
+
+      /* SHORT DESCRIPTION */
+      .blog-short-description {
+        font-size: 18px;
+        line-height: 1.7;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      /* FULL CONTENT */
+      .blog-content {
+        font-size: 17px;
+        line-height: 1.85;
+        color: #444;
+      }
+
+      .blog-content p {
+        margin: 0 0 22px;
+      }
+
+      /* BACK BUTTON */
+      .back-btn {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 12px 22px;
+        background: #199f61;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 7px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .back-btn:hover {
+        background: #147d4d;
+      }
+
+      /* LOADING */
+      .loading {
+        text-align: center;
+        padding: 60px;
+        color: #777;
+      }
+
+      /* MOBILE */
+      @media (max-width: 768px) {
+        .blog-details-container {
+          margin: 25px auto;
+          padding: 0 12px;
+        }
+
+        .blog-details-image {
+          height: 260px;
+        }
+
+        .blog-details-content {
+          padding: 28px 22px 35px;
+        }
+
+        .blog-title {
+          font-size: 28px;
+        }
+
+        .blog-short-description {
+          font-size: 16px;
+        }
+
+        .blog-content {
+          font-size: 16px;
+          line-height: 1.75;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .blog-details-image {
+          height: 220px;
+        }
+
+        .blog-details-content {
+          padding: 24px 18px 30px;
+        }
+
+        .blog-title {
+          font-size: 25px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="blog-details-container" id="blogDetails">
+      <div class="blog-details-card">
+        <div class="loading">Loading blog...</div>
+      </div>
+    </div>
+
+    <script>
+      const BLOG_API = "http://localhost:8080/api/blogs";
+
+      /* ===============================
+       ESCAPE HTML
+    =============================== */
+
+      function escapeHTML(value) {
+        const div = document.createElement("div");
+
+        div.textContent = value || "";
+
+        return div.innerHTML;
+      }
+
+      /* ===============================
+       LOAD BLOG
+    =============================== */
+
+      async function loadBlog() {
+        const container = document.getElementById("blogDetails");
+
+        const params = new URLSearchParams(window.location.search);
+
+        const blogId = params.get("id");
+
+        if (!blogId) {
+          container.innerHTML = `
+          <div class="blog-details-card">
+            <div class="loading">
+              Blog not found.
+            </div>
+          </div>
+        `;
+
+          return;
+        }
+
+        try {
+          const response = await fetch(`${BLOG_API}/${blogId}`);
+
+          if (!response.ok) {
+            throw new Error("Blog not found");
+          }
+
+          const blog = await response.json();
+
+          /* IMAGE */
+
+          const image = blog.imageUrl
+            ? "http://localhost:8080" + blog.imageUrl
+            : "";
+
+          /* DATE */
+
+          const date = blog.createdAt
+            ? new Date(blog.createdAt).toLocaleDateString("en-IN", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+              })
+            : "";
+
+          /* FULL CONTENT */
+
+          const content = escapeHTML(blog.content || "")
+            .split(/\r?\n/)
+            .map((line) => {
+              if (!line.trim()) {
+                return "";
+              }
+
+              return `<p>${line}</p>`;
+            })
+            .join("");
+
+          /* PAGE */
+
+          container.innerHTML = `
+
+          <article class="blog-details-card">
+
+            ${
+              image
+                ? `
+                  <img
+                    src="${image}"
+                    class="blog-details-image"
+                    alt="${escapeHTML(blog.title)}"
+                  >
+                `
+                : ""
+            }
+
+
+            <div class="blog-details-content">
+
+              <span class="blog-category">
+                ${escapeHTML(blog.category || "General")}
+              </span>
+
+
+              <h1 class="blog-title">
+                ${escapeHTML(blog.title || "Untitled Blog")}
+              </h1>
+
+
+              <div class="blog-meta">
+
+                By
+                ${escapeHTML(blog.author || "Millennium Kidss")}
+
+                ${date ? ` &nbsp; | &nbsp; ${date}` : ""}
+
+              </div>
+
+
+              ${
+                blog.shortDescription
+                  ? `
+                    <div class="blog-short-description">
+                      ${escapeHTML(blog.shortDescription)}
+                    </div>
+                  `
+                  : ""
+              }
+
+
+              <div class="blog-content">
+
+                ${content}
+
+              </div>
+
+
+               <a
+            href="${
+              params.get("from") === "admin"
+                ? "blog.html"
+                : "../index.html#blog-area"
+            }"
+            class="back-btn"
+          >
+            ${
+              params.get("from") === "admin"
+                ? "← Back to Admin Blogs"
+                : "← Back to Blogs"
+            }
+          </a>
+
+            </div>
+
+          </article>
+
+        `;
+
+          /* UPDATE PAGE TITLE */
+
+          document.title = `${blog.title || "Blog"} | Millennium Kidss`;
+        } catch (error) {
+          console.error("Error loading blog:", error);
+
+          container.innerHTML = `
+
+          <div class="blog-details-card">
+
+            <div class="loading">
+
+              <h2>
+                Unable to load blog
+              </h2>
+
+              <p>
+                Please try again later.
+              </p>
+
+        
+              
+            </div>
+
+          </div>
+
+        `;
+        }
+      }
+
+      loadBlog();
+    </script>
+  </body>
+</html>
