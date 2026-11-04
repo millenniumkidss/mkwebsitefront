@@ -1,520 +1,702 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- ========== Meta Tags ========== -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Millennium Kidss">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Millennium Kidss" />
 
     <!-- ========== Page Title ========== -->
-   
-	 <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- ========== Page Title ========== -->
-<link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+      rel="Stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="img/favicon1.jpg" type="image/x-icon">
-<link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="shortcut icon" href="img/favicon1.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cloudflare.com" />
     <!-- ========== Start Stylesheet ========== -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-   
-    <link href="css/magnific-popup.css" rel="stylesheet">
-    <link href="css/swiper-bundle.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/validnavs.css" rel="stylesheet">
-    <link href="css/helper.css" rel="stylesheet">
-    <link href="css/unit-test.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="css/magnific-popup.css" rel="stylesheet" />
+    <link href="css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/validnavs.css" rel="stylesheet" />
+    <link href="css/helper.css" rel="stylesheet" />
+    <link href="css/unit-test.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      /* Desktop dropdown menus */
+      @media (min-width: 992px) {
+        .navbar-nav > li.dropdown {
+          position: relative;
+        }
+
+        .navbar-nav > li.dropdown:hover > .dropdown-menu {
+          display: block;
+        }
+
+        .navbar-nav > li.dropdown > .dropdown-menu {
+          margin-top: 0;
+          z-index: 9999;
+        }
+      }
+    </style>
     <!-- ========== End Stylesheet ========== -->
+  </head>
 
-
-	
-</head>
-
-<body class="theme-skyblue">
-
+  <body class="theme-skyblue">
     <!-- Start Preloader 
     ============================================= -->
     <div id="preloader">
-        <div id="edufix-preloader" class="edufix-preloader">
-            <div class="animation-preloader">
-                <div class="spinner"></div>
-                <div class="txt-loading">
-                    <span data-text-preloader="M" class="letters-loading">
-                        M
-                    </span>
-                    <span data-text-preloader="K" class="letters-loading">
-                        K
-                    </span>
-                   
-                </div>
-            </div>
-            <div class="loader">
-                <div class="row">
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                </div>
-            </div>
+      <div id="edufix-preloader" class="edufix-preloader">
+        <div class="animation-preloader">
+          <div class="spinner"></div>
+          <div class="txt-loading">
+            <span data-text-preloader="M" class="letters-loading"> M </span>
+            <span data-text-preloader="K" class="letters-loading"> K </span>
+          </div>
         </div>
+        <div class="loader">
+          <div class="row">
+            <div class="col-3 loader-section section-left">
+              <div class="bg"></div>
+            </div>
+            <div class="col-3 loader-section section-left">
+              <div class="bg"></div>
+            </div>
+            <div class="col-3 loader-section section-right">
+              <div class="bg"></div>
+            </div>
+            <div class="col-3 loader-section section-right">
+              <div class="bg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- End Preloader -->
-
-    
 
     <!-- Header 
     ============================================= -->
     <header>
-        <!-- Start Navigation -->
-        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs dark">
+      <!-- Start Navigation -->
+      <nav
+        class="navbar mobile-sidenav navbar-sticky navbar-default validnavs dark"
+      >
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- Start Header Navigation -->
+          <div class="item-flex">
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+                data-target="#navbar-menu"
+              >
+                <i class="fa fa-bars"></i>
+              </button>
+              <a class="navbar-brand" href="index.html">
+                <img src="img/logo-3.png" class="logo" alt="Logo" />
+              </a>
+            </div>
+          </div>
+          <!-- End Header Navigation -->
 
+          <div
+            class="nav-item-box d-flex justify-content-between align-items-center"
+          >
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+              <img src="img/logo-3.png" alt="Logo" />
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+                data-target="#navbar-menu"
+              >
+                <i class="fa fa-times"></i>
+              </button>
 
-            <div class="container d-flex justify-content-between align-items-center">            
+              <ul
+                class="nav navbar-nav navbar-right"
+                data-in="fadeInDown"
+                data-out="fadeOutUp"
+              >
+                <li class="dropdown megamenu-fw megamenu-style-two">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="dropdown megamenu-fw megamenu-style-four">
+                  <a href="about.html">About us</a>
+                </li>
+                <li class="dropdown megamenu-fw megamenu-style-four">
+                  <a href="class.html">Class</a>
+                </li>
 
-                <!-- Start Header Navigation -->
-                <div class="item-flex">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <a class="navbar-brand" href="index.html">
-                            <img src="img/logo-3.png" class="logo" alt="Logo">
-                        </a>
-                    </div>
-                </div>
-                <!-- End Header Navigation -->
+                <li class="dropdown megamenu-fw megamenu-style-four">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                    >Location <i class="fa-solid fa-chevron-down"></i
+                  ></a>
+                  <ul class="dropdown-menu megamenu-content" role="menu">
+                    <li>
+                      <div class="col-menu-wrap">
+                        <div class="menu-cal-items">
+                          <div class="col-menu">
+                            <ul class="menu-col">
+                              <li><a href="index.html">Khamla</a></li>
+                              <li><a href="index-2.html">Narendra Nagar</a></li>
+                              <li><a href="index-3.html">Nandanvan</a></li>
+                              <li><a href="index-4.html">Medical</a></li>
+                              <li><a href="index-4.html">Manewada</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
 
-                <div class="nav-item-box d-flex justify-content-between align-items-center">
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navbar-menu">
+                <li class="dropdown megamenu-fw megamenu-style-four">
+                  <a href="#">Blogs</a>
+                </li>
 
-                        <img src="img/logo-3.png" alt="Logo">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                            <i class="fa fa-times"></i>
-                        </button>
-                        
-                        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                            <li class="dropdown megamenu-fw megamenu-style-two">
-                                <a href="index.html" >Home</a>
-                                
-                            </li>
-                            <li class="dropdown megamenu-fw megamenu-style-four">
-                                <a href="about.html" >About us</a>
-                                
-                            </li>
-							<li class="dropdown megamenu-fw megamenu-style-four">
-                                <a href="class.html">Class</a>
-							</li>
-							
-							<li class="dropdown megamenu-fw megamenu-style-four">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Location <i class="fa-solid fa-chevron-down"></i></a>
-								<ul class="dropdown-menu megamenu-content" role="menu">
-                                    <li>
-                                        <div class="col-menu-wrap">
-                                            <div class="menu-cal-items">
-                                                <div class="col-menu">
-                                                   
-                                                     <ul class="menu-col">
-                                                        <li><a href="index.html">Khamla</a></li>
-                                                        <li><a href="index-2.html">Narendra Nagar</a></li>
-                                                        <li><a href="index-3.html">Nandanvan</a></li>                                                       
-													    <li><a href="index-4.html">Medical</a></li>
-														<li><a href="index-4.html">Manewada</a></li>
-                                                    </ul> 
-                                                </div>
-                                                
-                                            </div>
-                                            
-                                        </div>
-                                    </li>
-                                </ul>
-							</li>
-							
-							<li class="dropdown megamenu-fw megamenu-style-four">
-                                <a href="#">Blogs</a>
-							</li>
-							
-                            <li class="dropdown megamenu-fw megamenu-style-three">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Events<i class="fa-solid fa-chevron-down"></i></a>
-                                <ul class="dropdown-menu megamenu-content" role="menu">
-                                    <li>
-                                        <div class="col-menu-wrap">
-                                            <div class="col-menu">
-                                               <!--  <h6 class="title">Get Started</h6> -->
-                                                <div class="content">
-                                                    <ul class="menu-col">
-                                                        <li><a href="about-us.html">Story Time</a></li>
-                                                        <li><a href="about-us-2.html">Independence Day</a></li>
-                                                        <li><a href="instructor.html">Makar Sankranti Festival</a></li>
-                                                        <li><a href="profile.html">Holi Festival</a></li>
-                                                        <li><a href="gallery.html">Rakhipournima Festival with Community Helpers</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-menu">
-                                                <!-- <h6 class="title">Events</h6> -->
-                                                <div class="content">
-                                                    <ul class="menu-col">
-                                                        <li><a href="event.html">Krishna Jayanti</a></li>
-                                                        <li><a href="event-2.html">Pola</a></li>
-                                                        <li><a href="event-3.html">Dussehra</a></li>
-                                                        <li><a href="event-4.html">Diwali Celebration</a></li>
-                                                        <li><a href="event-single.html">Christmas Celebration</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-menu">
-                                                <!-- <h6 class="title">Important Pages</h6> -->
-                                                <div class="content">
-                                                    <ul class="menu-col">
-                                                        <li><a href="membership-plan.html">Dental Camp</a></li>
-                                                        <li><a href="zoom-meeting.html">Daddys Day Out</a></li>
-                                                        <li><a href="zoom-meeting-details.html">Transport Theme Activities</a></li>
-                                                        <li><a href="faq.html">Fancy Dress Competition</a></li>
-                                                        <li><a href="privacy-policy.html">Grandparents Day Celebration</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>    
-                                            <div class="col-menu">
-                                               <!--  <h6 class="title">Other Pages</h6> -->
-                                                <div class="content">
-                                                    <ul class="menu-col">
-                                                        <li><a href="contact.html">Sports Day</a></li>
-                                                        <li><a href="login.html">Annual Day</a></li>                                                        
-														<li><a href="register.html">Pool Party</a></li>
-                                                        
-                                                    </ul>
-                                                </div>
-                                            </div><!-- end col-3 -->
-                                        </div><!-- end row -->
-                                    </li>
-                                </ul>
-                            </li>
-							
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
+                <li class="dropdown megamenu-fw megamenu-style-three">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                    >Our Events<i class="fa-solid fa-chevron-down"></i
+                  ></a>
+                  <ul class="dropdown-menu megamenu-content" role="menu">
+                    <li>
+                      <div class="col-menu-wrap">
+                        <div class="col-menu">
+                          <!--  <h6 class="title">Get Started</h6> -->
+                          <div class="content">
+                            <ul class="menu-col">
+                              <li><a href="about-us.html">Story Time</a></li>
+                              <li>
+                                <a href="about-us-2.html">Independence Day</a>
+                              </li>
+                              <li>
+                                <a href="instructor.html"
+                                  >Makar Sankranti Festival</a
+                                >
+                              </li>
+                              <li><a href="profile.html">Holi Festival</a></li>
+                              <li>
+                                <a href="gallery.html"
+                                  >Rakhipournima Festival with Community
+                                  Helpers</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-menu">
+                          <!-- <h6 class="title">Events</h6> -->
+                          <div class="content">
+                            <ul class="menu-col">
+                              <li><a href="event.html">Krishna Jayanti</a></li>
+                              <li><a href="event-2.html">Pola</a></li>
+                              <li><a href="event-3.html">Dussehra</a></li>
+                              <li>
+                                <a href="event-4.html">Diwali Celebration</a>
+                              </li>
+                              <li>
+                                <a href="event-single.html"
+                                  >Christmas Celebration</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-menu">
+                          <!-- <h6 class="title">Important Pages</h6> -->
+                          <div class="content">
+                            <ul class="menu-col">
+                              <li>
+                                <a href="membership-plan.html">Dental Camp</a>
+                              </li>
+                              <li>
+                                <a href="zoom-meeting.html">Daddys Day Out</a>
+                              </li>
+                              <li>
+                                <a href="zoom-meeting-details.html"
+                                  >Transport Theme Activities</a
+                                >
+                              </li>
+                              <li>
+                                <a href="faq.html">Fancy Dress Competition</a>
+                              </li>
+                              <li>
+                                <a href="privacy-policy.html"
+                                  >Grandparents Day Celebration</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-menu">
+                          <!--  <h6 class="title">Other Pages</h6> -->
+                          <div class="content">
+                            <ul class="menu-col">
+                              <li><a href="contact.html">Sports Day</a></li>
+                              <li><a href="login.html">Annual Day</a></li>
+                              <li><a href="register.html">Pool Party</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- end col-3 -->
+                      </div>
+                      <!-- end row -->
+                    </li>
+                  </ul>
+                </li>
 
-                
-                </div>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+        </div>
+        <!-- Overlay screen for menu -->
 
-                
-
-            </div>   
-            <!-- Overlay screen for menu -->
-            
-            <!-- End Overlay screen for menu -->
-        </nav>
-        <!-- End Navigation -->
+        <!-- End Overlay screen for menu -->
+      </nav>
+      <!-- End Navigation -->
     </header>
     <!-- End Header -->
-	
-	 <!-- Start Breadcrumb 
+
+    <!-- Start Breadcrumb 
     ============================================= -->
     <div class="breadcrumb-area text-center bg-gray-gradient-secondary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <h1>About Us</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                            <li class="active">About</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <h1>About Us</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li>
+                  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="active">About</li>
+              </ol>
+            </nav>
+          </div>
         </div>
+      </div>
     </div>
     <!-- End Breadcrumb -->
 
-<!-- Start About 
+    <!-- Start About 
     ============================================= -->
     <div class="about-style-one-area default-padding">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6">
-                    <div class="thumb-style-two">
-                        <img class="wow fadeInUp" src="img/thumb/4.jpg" alt="Image Not Found">
-                        <img class="wow fadeInDown" data-wow-delay="200ms" src="img/thumb/5.jpg" alt="Image Not Found">
-                        <div class="shape">
-                            <img src="img/shape/35.png" alt="Image Not Found">
-                            <img src="img/shape/37.png" alt="Image Not Found">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=pv648_qOz94" class="popup-youtube video-play-button"><i class="fas fa-play"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 pl-80 pl-md-15 pl-xs-15">
-                    <div class="about-style-one-info">
-                        <h2 class="title split-text">The Best Preschool, Daycare and Activity center</h2>
-                        <div class="wow fadeInUp" data-wow-delay="400ms">
-                            <p>
-                                Aayu Educare Society proudly runs Millennium Kidss Preschool & Daycare in Nagpur, established in 2016. We follow an updated curriculum aligned with the National Education Policy (NEP 2022) for pre-primary education, ensuring developmentally appropriate and future-ready learning for young children.
-At Millennium Kidss, we offer a play-based learning program for children aged 1 to 6 years, focusing on cognitive, social, emotional, and physical development. Our centers are conveniently located in Khamla, Narendra Nagar, Medical, Nandanvan, and Manewada, providing both Pre-Primary School and Daycare services.
-Our philosophy is to create a safe, nurturing, and child-friendly environment where learning is holistic, joyful, and stress-free. We believe that learning is a lifelong process, and early childhood education lays the foundation for confident, happy, and curious learners.
-                            </p>
-                            
-                            <ul class="list-style-two">
-                                <li>Comprehensive reporting on individual achievement</li>
-                                <li>Educational field trips and school presentations</li>
-                                <li>Individual attention in a small-class setting </li>
-								 <li>Learning program with after-school care </li>
-                            </ul>
-                            <div class="button-double mt-30">
-                                <a class="btn btn-sm btn-gradient animation" href="about-us.html">Learn More</a>
-                                <a class="btn btn-sm btn-dark animation" href="contact.html">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="thumb-style-two">
+              <img
+                class="wow fadeInUp"
+                src="img/thumb/4.jpg"
+                alt="Image Not Found"
+              />
+              <img
+                class="wow fadeInDown"
+                data-wow-delay="200ms"
+                src="img/thumb/5.jpg"
+                alt="Image Not Found"
+              />
+              <div class="shape">
+                <img src="img/shape/35.png" alt="Image Not Found" />
+                <img src="img/shape/37.png" alt="Image Not Found" />
+              </div>
+              <a
+                href="https://www.youtube.com/watch?v=pv648_qOz94"
+                class="popup-youtube video-play-button"
+                ><i class="fas fa-play"></i
+              ></a>
             </div>
+          </div>
+          <div class="col-lg-6 pl-80 pl-md-15 pl-xs-15">
+            <div class="about-style-one-info">
+              <h2 class="title split-text">
+                The Best Preschool, Daycare and Activity center
+              </h2>
+              <div class="wow fadeInUp" data-wow-delay="400ms">
+                <p>
+                  Aayu Educare Society proudly runs Millennium Kidss Preschool &
+                  Daycare in Nagpur, established in 2016. We follow an updated
+                  curriculum aligned with the National Education Policy (NEP
+                  2022) for pre-primary education, ensuring developmentally
+                  appropriate and future-ready learning for young children. At
+                  Millennium Kidss, we offer a play-based learning program for
+                  children aged 1 to 6 years, focusing on cognitive, social,
+                  emotional, and physical development. Our centers are
+                  conveniently located in Khamla, Narendra Nagar, Medical,
+                  Nandanvan, and Manewada, providing both Pre-Primary School and
+                  Daycare services. Our philosophy is to create a safe,
+                  nurturing, and child-friendly environment where learning is
+                  holistic, joyful, and stress-free. We believe that learning is
+                  a lifelong process, and early childhood education lays the
+                  foundation for confident, happy, and curious learners.
+                </p>
+
+                <ul class="list-style-two">
+                  <li>Comprehensive reporting on individual achievement</li>
+                  <li>Educational field trips and school presentations</li>
+                  <li>Individual attention in a small-class setting</li>
+                  <li>Learning program with after-school care</li>
+                </ul>
+                <div class="button-double mt-30">
+                  <a
+                    class="btn btn-sm btn-gradient animation"
+                    href="about-us.html"
+                    >Learn More</a
+                  >
+                  <a class="btn btn-sm btn-dark animation" href="contact.html"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- End About -->
-	
-	<!-- Start Choose Us 
+
+    <!-- Start Choose Us 
     ============================================= -->
-    <div class="choose-us-style-two-area default-padding bg-gray-gradient-secondary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="site-heading text-center">
-                        <h4 class="sub-title">Why Choose Us</h4>
-                        <h2 class="title split-text">Our Core Values</h2>
-                    </div>
-                </div>
+    <div
+      class="choose-us-style-two-area default-padding bg-gray-gradient-secondary"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="site-heading text-center">
+              <h4 class="sub-title">Why Choose Us</h4>
+              <h2 class="title split-text">Our Core Values</h2>
             </div>
+          </div>
         </div>
-        <div class="container container-stage">
-            <div class="row">
-                <div class="col-xl-4 pr-60 pr-md-15 pr-xs-15">
-                    <ul class="nav nav-tabs tab-style-two-nav wow fadeInUp" id="myTab_2" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="tabs_11" data-bs-toggle="tab" data-bs-target="#tab_11" type="button" role="tab" aria-controls="tab_11" aria-selected="true">
-                                <img src="img/icon/35.png" alt="Image Not Fond"> <strong>Learn And Play</strong>
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="tabs_12" data-bs-toggle="tab" data-bs-target="#tab_12" type="button" role="tab" aria-controls="tab_12" aria-selected="false">
-                                <img src="img/icon/36.png" alt="Image Not Fond"> <strong>Great Teachers</strong>
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="tabs_13" data-bs-toggle="tab" data-bs-target="#tab_13" type="button" role="tab" aria-controls="tab_13" aria-selected="false">
-                                <img src="img/icon/37.png" alt="Image Not Fond"> <strong>Family Environment</strong>
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="tabs_14" data-bs-toggle="tab" data-bs-target="#tab_14" type="button" role="tab" aria-controls="tab_14" aria-selected="false">
-                                <img src="img/icon/38.png" alt="Image Not Fond"> <strong>Excellent Programmes</strong>
-                            </button>
-                        </li>
-                    </ul>
+      </div>
+      <div class="container container-stage">
+        <div class="row">
+          <div class="col-xl-4 pr-60 pr-md-15 pr-xs-15">
+            <ul
+              class="nav nav-tabs tab-style-two-nav wow fadeInUp"
+              id="myTab_2"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="tabs_11"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tab_11"
+                  type="button"
+                  role="tab"
+                  aria-controls="tab_11"
+                  aria-selected="true"
+                >
+                  <img src="img/icon/35.png" alt="Image Not Fond" />
+                  <strong>Learn And Play</strong>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="tabs_12"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tab_12"
+                  type="button"
+                  role="tab"
+                  aria-controls="tab_12"
+                  aria-selected="false"
+                >
+                  <img src="img/icon/36.png" alt="Image Not Fond" />
+                  <strong>Great Teachers</strong>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="tabs_13"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tab_13"
+                  type="button"
+                  role="tab"
+                  aria-controls="tab_13"
+                  aria-selected="false"
+                >
+                  <img src="img/icon/37.png" alt="Image Not Fond" />
+                  <strong>Family Environment</strong>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="tabs_14"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tab_14"
+                  type="button"
+                  role="tab"
+                  aria-controls="tab_14"
+                  aria-selected="false"
+                >
+                  <img src="img/icon/38.png" alt="Image Not Fond" />
+                  <strong>Excellent Programmes</strong>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xl-8">
+            <div
+              class="tab-content tab-style-two-content text-light wow fadeInUp"
+              data-wow-delay="300ms"
+              id="myTabContent_2"
+            >
+              <!-- Single Tab Content -->
+              <div
+                class="tab-pane fade show active"
+                id="tab_11"
+                role="tabpanel"
+                aria-labelledby="tabs_11"
+              >
+                <div class="choose-us-style-two-content">
+                  <div class="info">
+                    <h2>Learn And Play</h2>
+                    <p>
+                      Our goal is to create a supportive and stimulating
+                      environment where children can thrive, learn, and grow to
+                      their fullest potential.
+                    </p>
+                    <!-- <ul class="list-style-two">
+                                        <li>Educated citizens bring development in the country</li>
+                                        <li>Education is a power and makes a person powerful</li>
+                                        <li>Education changes your bad today into good tomorrow</li>
+                                    </ul> -->
+                  </div>
+                  <div class="thumb">
+                    <img src="img/thumb/9.jpg" alt="Image Not Found" />
+                  </div>
                 </div>
-                <div class="col-xl-8">
-                    <div class="tab-content tab-style-two-content text-light wow fadeInUp" data-wow-delay="300ms" id="myTabContent_2">
-                        <!-- Single Tab Content -->
-                        <div class="tab-pane fade show active" id="tab_11" role="tabpanel" aria-labelledby="tabs_11">
-                            <div class="choose-us-style-two-content">
-                                <div class="info">
-                                    <h2>Learn And Play</h2>
-                                    <p>
-                                       Our goal is to create a supportive and stimulating environment where children can thrive, learn, and grow to their fullest potential.
-                                    </p>
-                                    <!-- <ul class="list-style-two">
+              </div>
+              <!-- End Single Tab Content -->
+
+              <!-- Single Tab Content -->
+              <div
+                class="tab-pane fade"
+                id="tab_12"
+                role="tabpanel"
+                aria-labelledby="tabs_12"
+              >
+                <div class="choose-us-style-two-content">
+                  <div class="info">
+                    <h2>Great Teachers</h2>
+                    <p>
+                      Millennium Kidss plays a vital role in laying the
+                      foundation for children's lifelong learning, growth, and
+                      success.
+                    </p>
+                    <!-- <ul class="list-style-two">
                                         <li>Educated citizens bring development in the country</li>
                                         <li>Education is a power and makes a person powerful</li>
                                         <li>Education changes your bad today into good tomorrow</li>
                                     </ul> -->
-                                </div>
-                                <div class="thumb">
-                                    <img src="img/thumb/9.jpg" alt="Image Not Found">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Tab Content -->
-
-                        <!-- Single Tab Content -->
-                        <div class="tab-pane fade" id="tab_12" role="tabpanel" aria-labelledby="tabs_12">
-                            <div class="choose-us-style-two-content">
-                                <div class="info">
-                                    <h2>Great Teachers</h2>
-                                    <p>
-                                        Millennium Kidss plays a vital role in laying the foundation for children's lifelong learning, growth, and success.
-                                    </p>
-                                    <!-- <ul class="list-style-two">
-                                        <li>Educated citizens bring development in the country</li>
-                                        <li>Education is a power and makes a person powerful</li>
-                                        <li>Education changes your bad today into good tomorrow</li>
-                                    </ul> -->
-                                </div>
-                                <div class="thumb">
-                                    <img src="img/thumb/10.jpg" alt="Imaeg Not Found">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Tab Content -->
-
-                        <!-- Single Tab Content -->
-                        <div class="tab-pane fade" id="tab_13" role="tabpanel" aria-labelledby="tabs_13">
-                            <div class="choose-us-style-two-content">
-                                <div class="info">
-                                    <h2>Family Environment</h2>
-                                    <p>
-                                        Our aim is to create a nurturing and supportive community that promotes the holistic development of children and fosters strong relationships between educators, children, and families
-                                    </p>
-                                    <!-- <ul class="list-style-two">
-                                        <li>Educated citizens bring development in the country</li>
-                                        <li>Education is a power and makes a person powerful</li>
-                                        <li>Education changes your bad today into good tomorrow</li>
-                                    </ul> -->
-                                </div>
-                                <div class="thumb">
-                                    <img src="
-                                    img/thumb/11.jpg" alt="Imaeg Not Found">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Tab Content -->
-
-                        <!-- Single Tab Content -->
-                        <div class="tab-pane fade" id="tab_14" role="tabpanel" aria-labelledby="tabs_14">
-                            <div class="choose-us-style-two-content">
-                                <div class="info">
-                                    <h2>Excellent Programmes</h2>
-                                    <p>
-                                        In Millennium Kidss educators can create a stimulating and supportive learning environment that fosters children's curiosity, creativity, critical thinking, and lifelong love for learning.
-                                    </p>
-                                    <!-- <ul class="list-style-two">
-                                        <li>Educated citizens bring development in the country</li>
-                                        <li>Education is a power and makes a person powerful</li>
-                                        <li>Education changes your bad today into good tomorrow</li>
-                                    </ul> -->
-                                </div>
-                                <div class="thumb">
-                                    <img src="img/thumb/12.jpg" alt="Image Not Found">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Tab Content -->
-
-                    </div>
+                  </div>
+                  <div class="thumb">
+                    <img src="img/thumb/10.jpg" alt="Imaeg Not Found" />
+                  </div>
                 </div>
+              </div>
+              <!-- End Single Tab Content -->
+
+              <!-- Single Tab Content -->
+              <div
+                class="tab-pane fade"
+                id="tab_13"
+                role="tabpanel"
+                aria-labelledby="tabs_13"
+              >
+                <div class="choose-us-style-two-content">
+                  <div class="info">
+                    <h2>Family Environment</h2>
+                    <p>
+                      Our aim is to create a nurturing and supportive community
+                      that promotes the holistic development of children and
+                      fosters strong relationships between educators, children,
+                      and families
+                    </p>
+                    <!-- <ul class="list-style-two">
+                                        <li>Educated citizens bring development in the country</li>
+                                        <li>Education is a power and makes a person powerful</li>
+                                        <li>Education changes your bad today into good tomorrow</li>
+                                    </ul> -->
+                  </div>
+                  <div class="thumb">
+                    <img
+                      src="
+                                    img/thumb/11.jpg"
+                      alt="Imaeg Not Found"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- End Single Tab Content -->
+
+              <!-- Single Tab Content -->
+              <div
+                class="tab-pane fade"
+                id="tab_14"
+                role="tabpanel"
+                aria-labelledby="tabs_14"
+              >
+                <div class="choose-us-style-two-content">
+                  <div class="info">
+                    <h2>Excellent Programmes</h2>
+                    <p>
+                      In Millennium Kidss educators can create a stimulating and
+                      supportive learning environment that fosters children's
+                      curiosity, creativity, critical thinking, and lifelong
+                      love for learning.
+                    </p>
+                    <!-- <ul class="list-style-two">
+                                        <li>Educated citizens bring development in the country</li>
+                                        <li>Education is a power and makes a person powerful</li>
+                                        <li>Education changes your bad today into good tomorrow</li>
+                                    </ul> -->
+                  </div>
+                  <div class="thumb">
+                    <img src="img/thumb/12.jpg" alt="Image Not Found" />
+                  </div>
+                </div>
+              </div>
+              <!-- End Single Tab Content -->
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- End Choose Us -->
-	
-	<!-- Start Advisor 
+
+    <!-- Start Advisor 
     ============================================= -->
     <div class="advisor-style-one-area default-padding mb--50">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                        <h4 class="sub-title">Professional Instructor</h4>
-                        <h2 class="title split-text">Meet the talented advisor form our institute</h2>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+            <div class="site-heading text-center">
+              <h4 class="sub-title">Professional Instructor</h4>
+              <h2 class="title split-text">
+                Meet the talented advisor form our institute
+              </h2>
             </div>
+          </div>
         </div>
-        <div class="container">
-            <div class="advisor-style-one-items">
-                <div class="row">
-                    <div class="col-xl-2 col-lg-6 col-md-6 mb-50 wow fadeInUp" data-wow-delay="400ms">
-                       
+      </div>
+      <div class="container">
+        <div class="advisor-style-one-items">
+          <div class="row">
+            <div
+              class="col-xl-2 col-lg-6 col-md-6 mb-50 wow fadeInUp"
+              data-wow-delay="400ms"
+            ></div>
+            <!-- Single item -->
+            <div
+              class="col-xl-4 col-lg-6 col-md-6 mb-50 wow fadeInUp"
+              data-wow-delay="200ms"
+            >
+              <div class="advisor-style-one-item">
+                <div class="thumb">
+                  <img
+                    src="
+                               img/advisor/MithilaMam.png"
+                    alt="Image Not Found"
+                  />
+                  <div class="social-overlay">
+                    <ul>
+                      <li>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      </li>
+                    </ul>
+                    <div class="icon">
+                      <div class="inner">
+                        <i class="fas fa-plus"></i>
+                      </div>
                     </div>
-                    <!-- Single item -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 mb-50 wow fadeInUp" data-wow-delay="200ms">
-                       <div class="advisor-style-one-item">
-                           <div class="thumb">
-                               <img src="
-                               img/advisor/MithilaMam.png" alt="Image Not Found">
-                               <div class="social-overlay">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-dribbble"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-                                    </ul>
-                                    <div class="icon">
-                                        <div class="inner">
-                                            <i class="fas fa-plus"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                           </div>
-                           <div class="info">
-                                <h4><a href="profile.html">Mithila Pitale</a></h4>
-                                <span>Principal</span>
-                            </div>
-                       </div>
+                  </div>
+                </div>
+                <div class="info">
+                  <h4><a href="profile.html">Mithila Pitale</a></h4>
+                  <span>Principal</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Single item -->
+            <!-- Single item -->
+            <div
+              class="col-xl-4 col-lg-6 col-md-6 mb-50 wow fadeInUp"
+              data-wow-delay="400ms"
+            >
+              <div class="advisor-style-one-item wow">
+                <div class="thumb">
+                  <img src="img/advisor/Sachinsir.jpeg" alt="Image Not Found" />
+                  <div class="social-overlay">
+                    <ul>
+                      <li>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      </li>
+                    </ul>
+                    <div class="icon">
+                      <div class="inner">
+                        <i class="fas fa-plus"></i>
+                      </div>
                     </div>
-                   <!-- End Single item -->
-                    <!-- Single item -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 mb-50 wow fadeInUp" data-wow-delay="400ms">
-                       <div class="advisor-style-one-item wow">
-                           <div class="thumb">
-                               <img src="img/advisor/Sachinsir.jpeg" alt="Image Not Found">
-                               <div class="social-overlay">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-dribbble"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-                                    </ul>
-                                    <div class="icon">
-                                        <div class="inner">
-                                            <i class="fas fa-plus"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                           </div>
-                           <div class="info">
-                                <h4><a href="profile.html">Sachin Pitale</a></h4>
-                                <span>Director</span>
-                            </div>
-                       </div>
-                    </div>
-                   <!-- End Single item -->
-                    <!-- Single item -->
-                   
-				   <div class="col-xl-2 col-lg-6 col-md-6 mb-50 wow fadeInUp" data-wow-delay="400ms">
-                       
-                    </div>
-                    <!-- End Single item -->
-               </div>
-               <!-- <div class="row">
+                  </div>
+                </div>
+                <div class="info">
+                  <h4><a href="profile.html">Sachin Pitale</a></h4>
+                  <span>Director</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Single item -->
+            <!-- Single item -->
+
+            <div
+              class="col-xl-2 col-lg-6 col-md-6 mb-50 wow fadeInUp"
+              data-wow-delay="400ms"
+            ></div>
+            <!-- End Single item -->
+          </div>
+          <!-- <div class="row">
                    <div class="col-xl-12">
-                       <div class="team-grid">
-                           <div class="row"> -->
-                               <!-- Single item -->
-                               <!-- <div class="col-xl-4 col-lg-6 col-md-6 mb-50 wow fadeInUp">
+                       <div class="team-grid"> -->
+          <!-- <div class="row">  -->
+          <!-- Single item -->
+          <!-- <div class="col-xl-4 col-lg-6 col-md-6 mb-50 wow fadeInUp">
                                    <div class="advisor-style-one-item">
                                        <div class="thumb">
                                            <img src="img/advisor/3.jpg" alt="Image Not Found">
@@ -536,16 +718,16 @@ Our philosophy is to create a safe, nurturing, and child-friendly environment wh
                                                     </div>
                                                 </div>
                                             </div>
-                                       </div> -->
-                                       <!-- <div class="info">
+                                       </div>
+                                        <div class="info">
                                             <h4><a href="profile.html">Khushi Ninave</a></h4>
                                             <span>Admin</span>
                                         </div>
                                    </div>
-                               </div> -->
-                               <!-- End Single item -->
-                               <!-- Single item -->
-                               <!-- <div class="col-xl-4 col-lg-6 col-md-6 mb-50 wow fadeInUp" data-wow-delay="200ms">
+                               </div>  -->
+          <!-- End Single item -->
+          <!-- Single item -->
+          <!-- <div class="col-xl-4 col-lg-6 col-md-6 mb-50 wow fadeInUp" data-wow-delay="200ms">
                                    <div class="advisor-style-one-item">
                                        <div class="thumb">
                                            <img src="img/advisor/4.jpg" alt="Image Not Found">
@@ -567,16 +749,16 @@ Our philosophy is to create a safe, nurturing, and child-friendly environment wh
                                                     </div>
                                                 </div>
                                             </div>
-                                       </div> -->
-                                       <!-- <div class="info">
+                                       </div> 
+                                        <div class="info">
                                             <h4><a href="profile.html">Shrutika Kalbande</a></h4>
                                             <span>Curriculum Activities Head</span>
                                         </div>
                                    </div>
                                </div> -->
-                               <!-- End Single item -->
-                               <!-- Single item -->
-                               <!-- <div class="col-xl-4 col-lg-6 col-md-6 mb-50 wow fadeInUp" data-wow-delay="400ms">
+          <!-- End Single item -->
+          <!-- Single item -->
+          <!-- <div class="col-xl-4 col-lg-6 col-md-6 mb-50 wow fadeInUp" data-wow-delay="400ms">
                                    <div class="advisor-style-one-item">
                                        <div class="thumb">
                                            <img src="img/advisor/5.jpg" alt="Image Not Found">
@@ -598,505 +780,569 @@ Our philosophy is to create a safe, nurturing, and child-friendly environment wh
                                                     </div>
                                                 </div>
                                             </div>
-                                       </div> -->
-                                       <!-- <div class="info">
+                                       </div> -
+                                        <div class="info">
                                             <h4><a href="profile.html">Kashish Mandal</a></h4>
                                             <span>Curriculum Activities Head</span>
                                         </div>
                                    </div>
-                               </div> -->
-                               <!-- End Single item -->
-                           <!-- </div>
-                       </div>
-                   </div>
-               </div>
-            </div>
+                               </div>  -->
         </div>
-    </div> -->
+        <!-- closes advisor-style-one-items -->
+      </div>
+      <!-- closes container -->
+    </div>
+    <!-- closes advisor-style-one-area -->
     <!-- End Advisor -->
 
+    <!-- End Advisor -->
 
     <!-- Start Testimonial
     ============================================= -->
     <div class="testimonial-style-two-area default-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                        <h4 class="sub-title">Parents Feedback</h4>
-                        <h2 class="title split-text">Best review from our Parents</h2>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+            <div class="site-heading text-center">
+              <h4 class="sub-title">Parents Feedback</h4>
+              <h2 class="title split-text">Best review from our Parents</h2>
             </div>
+          </div>
         </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="testimonial-style-two-carousel swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Single Item -->
-                            <div class="swiper-slide">
-                                <div class="testimonial-style-two">
-                                    <div class="top-info">
-                                        <div class="icon">
-                                            👤
-                                        </div>
-                                        <h5>Ojasvi Warhade</h5>
-                                    </div>
-                                    <div class="content">
-                                        <p>
-                                            We really appreciate all the effort of Principal Mam put in to make school a great place to learn.Thanks to Ashwini and Yashshree Mam for taking so much efforts in creating positive and fun learning environment. Ojasvi have learned a lot from this school and changed from a shy to confident student.She will always remember her caring and loving teacher.Many thanks to her day care Rajshree Mam , Geeta tai,Pushpa tai and Shivani who took care ojasvi very well.Thanks to all team of Millennium Kidss!👏👍🙏</p>
-                                        <div class="bottom-info">
-                                            <div class="provider">
-                                                <!-- <div class="thumb">
-                                                    <img src="img/team/m3.jpg" alt="Image Not Found">
-                                                </div>
-                                                <div class="info">
-                                                    <h4>Michel Dark</h4>
-                                                    <span>WordPress Course</span>
-                                                </div> -->
-                                            </div>
-                                            <div class="provider">
-                                                <div class="ratings">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star-half-alt"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Item -->
-                            <!-- Single Item -->
-                            <div class="swiper-slide">
-                                <div class="testimonial-style-two">
-                                    <div class="top-info">
-                                        <div class="icon">
-                                            👤
-                                        </div>
-                                        <h5>Kshiraj Dhole</h5>
-                                    </div>
-                                    <div class="content">
-                                        <p>
-                                            Milleniurn kidss (Medied Branch) awesome school and daycare. My child has learnt dot form here, from daily routine activities to educationl things. Also the language and verbal skills have developed in my child over the period.The staff is dong recommendable job and totally satisfied with the school as well daycare service. </p>
-                                        <div class="bottom-info">
-                                            <div class="provider">
-                                                <!-- <div class="thumb">
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="testimonial-style-two-carousel swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Single Item -->
+                <div class="swiper-slide">
+                  <div class="testimonial-style-two">
+                    <div class="top-info">
+                      <div class="icon">👤</div>
+                      <h5>Ojasvi Warhade</h5>
+                    </div>
+                    <div class="content">
+                      <p>
+                        We really appreciate all the effort of Principal Mam put
+                        in to make school a great place to learn.Thanks to
+                        Ashwini and Yashshree Mam for taking so much efforts in
+                        creating positive and fun learning environment. Ojasvi
+                        have learned a lot from this school and changed from a
+                        shy to confident student.She will always remember her
+                        caring and loving teacher.Many thanks to her day care
+                        Rajshree Mam , Geeta tai,Pushpa tai and Shivani who took
+                        care ojasvi very well.Thanks to all team of Millennium
+                        Kidss!👏👍🙏
+                      </p>
+                      <div class="bottom-info">
+                        <div class="provider">
+                          <!-- <div class="thumb">
+                            <img src="img/team/m3.jpg" alt="Image Not Found">
+                        </div>
+                        <div class="info">
+                            <h4>Michel Dark</h4>
+                            <span>WordPress Course</span>
+                        </div> -->
+                        </div>
+                        <div class="provider">
+                          <div class="ratings">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Item -->
+                <!-- Single Item -->
+                <div class="swiper-slide">
+                  <div class="testimonial-style-two">
+                    <div class="top-info">
+                      <div class="icon">👤</div>
+                      <h5>Kshiraj Dhole</h5>
+                    </div>
+                    <div class="content">
+                      <p>
+                        Milleniurn kidss (Medied Branch) awesome school and
+                        daycare. My child has learnt dot form here, from daily
+                        routine activities to educationl things. Also the
+                        language and verbal skills have developed in my child
+                        over the period.The staff is dong recommendable job and
+                        totally satisfied with the school as well daycare
+                        service.
+                      </p>
+                      <div class="bottom-info">
+                        <div class="provider">
+                          <!-- <div class="thumb">
                                                     <img src="img/team/m4.jpg" alt="Image Not Found">
                                                 </div>
                                                 <div class="info">
                                                     <h4>Kennsual Martin</h4>
                                                     <span>Laravel Batch - 11</span>
                                                 </div> -->
-                                            </div>
-                                            <div class="provider">
-                                                <div class="ratings">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Item -->
-                             <!-- Single Item -->
-                            <div class="swiper-slide">
-                                <div class="testimonial-style-two">
-                                    <div class="top-info">
-                                        <div class="icon">
-                                           👤
-                                        </div>
-                                        <h5>Ameenah</h5>
-                                    </div>
-                                    <div class="content">
-                                        <p>
-                                            Am really thankful to millennium kidss ( medical branch ) teachers and all the staff who took great efforts in teaching and shaping my daughter's personality. Am really happy that ameenah has learnt to speak in Marathi also. Although she has not made progress in writing and learning but am really grateful to the daycare teachers and staff who took excellent care of my daughter so I wouldn't worry at all about her well being during my duty hours in the hospital. She has learnt to be independent and to interact with other kids. Am thankful to the Head of the school who did not impose strict rules on maintaining the uniform days and allowed my kid to be of her own sometimes.</p>
-                                        <div class="bottom-info">
-                                            <div class="provider">
-                                                <!-- <div class="thumb">
+                        </div>
+                        <div class="provider">
+                          <div class="ratings">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Item -->
+                <!-- Single Item -->
+                <div class="swiper-slide">
+                  <div class="testimonial-style-two">
+                    <div class="top-info">
+                      <div class="icon">👤</div>
+                      <h5>Ameenah</h5>
+                    </div>
+                    <div class="content">
+                      <p>
+                        Am really thankful to millennium kidss ( medical branch
+                        ) teachers and all the staff who took great efforts in
+                        teaching and shaping my daughter's personality. Am
+                        really happy that ameenah has learnt to speak in Marathi
+                        also. Although she has not made progress in writing and
+                        learning but am really grateful to the daycare teachers
+                        and staff who took excellent care of my daughter so I
+                        wouldn't worry at all about her well being during my
+                        duty hours in the hospital. She has learnt to be
+                        independent and to interact with other kids. Am thankful
+                        to the Head of the school who did not impose strict
+                        rules on maintaining the uniform days and allowed my kid
+                        to be of her own sometimes.
+                      </p>
+                      <div class="bottom-info">
+                        <div class="provider">
+                          <!-- <div class="thumb">
                                                     <img src="img/team/m5.jpg" alt="Image Not Found">
                                                 </div>
                                                 <div class="info">
                                                     <h4>Amanulla Joey</h4>
                                                     <span>React Batch - 28</span>
                                                 </div> -->
-                                            </div>
-                                            <div class="provider">
-                                                <div class="ratings">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star-half-alt"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Item -->
-                             <!-- Single Item -->
-                            <div class="swiper-slide">
-                                <div class="testimonial-style-two">
-                                    <div class="top-info">
-                                        <div class="icon">
-                                            👤
-                                        </div>
-                                        <h5>Amruta Athalye</h5>
-                                    </div>
-                                    <div class="content">
-                                        <p>
-                                            My daughter is in day care since last 2 years. Craft activities, daily Yoga, Games helped her develope a lot and create bond with teachers and friends. I always recommend my friends to take admission for their children here as it is very reliable.
-                                        </p>
-                                        <div class="bottom-info">
-                                            <div class="provider">
-                                                <!-- <div class="thumb">
+                        </div>
+                        <div class="provider">
+                          <div class="ratings">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Item -->
+                <!-- Single Item -->
+                <div class="swiper-slide">
+                  <div class="testimonial-style-two">
+                    <div class="top-info">
+                      <div class="icon">👤</div>
+                      <h5>Amruta Athalye</h5>
+                    </div>
+                    <div class="content">
+                      <p>
+                        My daughter is in day care since last 2 years. Craft
+                        activities, daily Yoga, Games helped her develope a lot
+                        and create bond with teachers and friends. I always
+                        recommend my friends to take admission for their
+                        children here as it is very reliable.
+                      </p>
+                      <div class="bottom-info">
+                        <div class="provider">
+                          <!-- <div class="thumb">
                                                     <img src="img/team/m6.jpg" alt="Image Not Found">
                                                 </div>
                                                 <div class="info">
                                                     <h4>Kamal Abraham</h4>
                                                     <span>PHP Course</span>
                                                 </div> -->
-                                            </div>
-                                            <div class="provider">
-                                                <div class="ratings">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Item -->
-                             <!-- Single Item -->
-                            <div class="swiper-slide">
-                                <div class="testimonial-style-two">
-                                    <div class="top-info">
-                                        <div class="icon">
-                                           👤
-                                        </div>
-                                        <h5>Banerjee</h5>
-                                    </div>
-                                    <div class="content">
-                                        <p>
-                                           Ek acchi teacher ek bacche ki zindegi badal sakti hai!! This is indeed a fact of life.<br>
-Thank you Rajashree madam for giving a beautiful start to my kid's educational journey. Now that the session ended, I know how polished my children are. They couldn't even speak when they joined school and were not even 2 yrs old and now, they know more than I could ever image. Its all because of you! <br>Thanks to you too Ashwini madam for being there always when we needed.</p>
-                                        <div class="bottom-info">
-                                            <div class="provider">
-                                                <!-- <div class="thumb">
-                                                    <img src="img/team/m1.jpg" alt="Image Not Found">
-                                                </div>
-                                                <div class="info">
-                                                    <h4>Kennsual Martin</h4>
-                                                    <span>Laravel Batch - 11</span>
-                                                </div> -->
-                                            </div>
-                                            <div class="provider">
-                                                <div class="ratings">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Item -->
-							
-							<!-- Single Item -->
-                            <div class="swiper-slide">
-                                <div class="testimonial-style-two">
-                                    <div class="top-info">
-                                        <div class="icon">
-                                            👤
-                                        </div>
-                                        <h5>Rupali Mankar</h5>
-                                    </div>
-                                    <div class="content">
-                                        <p>Thank u Ashwini Mam, Yashshree Mam and Millennium kidss Khamla team for taking so much effort to encourage and involve all kids to dance and make event more successful Kudos to all team</p>
-                                        <div class="bottom-info">
-                                            <div class="provider">
-                                                <!-- <div class="thumb">
-                                                    <img src="img/team/m1.jpg" alt="Image Not Found">
-                                                </div>
-                                                <div class="info">
-                                                    <h4>Kennsual Martin</h4>
-                                                    <span>Laravel Batch - 11</span>
-                                                </div> -->
-                                            </div>
-                                            <div class="provider">
-                                                <div class="ratings">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Item -->
-							<!-- Single Item -->
-                            <div class="swiper-slide">
-                                <div class="testimonial-style-two">
-                                    <div class="top-info">
-                                        <div class="icon">
-                                           👤
-                                        </div>
-                                        <h5>Prajakta Warjukar</h5>
-                                    </div>
-                                    <div class="content">
-                                        <p>My daughter is in Millenniumium kidss since 4 and half years... Happy with the kind of care taken by the team.. Various activities taken by them are great for holistic development.. Highly recommended..</p>
-                                        <div class="bottom-info">
-                                            <div class="provider">
-                                                <!-- <div class="thumb">
-                                                    <img src="img/team/m1.jpg" alt="Image Not Found">
-                                                </div>
-                                                <div class="info">
-                                                    <h4>Kennsual Martin</h4>
-                                                    <span>Laravel Batch - 11</span>
-                                                </div> -->
-                                            </div>
-                                            <div class="provider">
-                                                <div class="ratings">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Item -->
-							<!-- Single Item -->
-                            <div class="swiper-slide">
-                                <div class="testimonial-style-two">
-                                    <div class="top-info">
-                                        <div class="icon">
-                                           👤
-                                        </div>
-                                        <h5>Anup Deshpande</h5>
-                                    </div>
-                                    <div class="content">
-                                        <p>Very good teachers and good facilities for childrens. Nice program and activities are provided for children to enhance learning experience.</p>
-                                        <div class="bottom-info">
-                                            <div class="provider">
-                                                <!-- <div class="thumb">
-                                                    <img src="img/team/m1.jpg" alt="Image Not Found">
-                                                </div>
-                                                <div class="info">
-                                                    <h4>Kennsual Martin</h4>
-                                                    <span>Laravel Batch - 11</span>
-                                                </div> -->
-                                            </div>
-                                            <div class="provider">
-                                                <div class="ratings">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Item -->
-
-                            <!-- Single Item -->
-                            <div class="swiper-slide">
-                                <div class="testimonial-style-two">
-                                    <div class="top-info">
-                                        <div class="icon">
-                                           👤
-                                        </div>
-                                        <h5>Sanskruti Deodhar</h5>
-                                    </div>
-                                    <div class="content">
-                                        <p>This day care is such a homely place for your kid.I am sending my kid since she was 3.The head Mrs. Pitale maam ,teachers and staff are so kind,caring,friendly and motherly. They engage your child in developing their creativity,social skills,motors skills and to adjust with all the kids around with lot of fun activities. The kids paint,draw,dance,play,study and celebrate all the festivals together.
-If any parent wants to work in their offices without any stress then this place is right place to enroll your kid.
-Facilities:cctv access to parents, Hygenic washrooms and play area, Day care is working on most of the days except mandatory holidays,tuition facility,excellent and hardworking teachers.
-Suggestion:Can start tiffin facilities or providing snacks for kids.
-</p>
-                                        <div class="bottom-info">
-                                            <div class="provider">
-                                                <!-- <div class="thumb">
-                                                    <img src="img/team/m1.jpg" alt="Image Not Found">
-                                                </div>
-                                                <div class="info">
-                                                    <h4>Kennsual Martin</h4>
-                                                    <span>Laravel Batch - 11</span>
-                                                </div> -->
-                                            </div>
-                                            <div class="provider">
-                                                <div class="ratings">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Item -->
                         </div>
+                        <div class="provider">
+                          <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+                <!-- Single Item -->
+                <!-- Single Item -->
+                <div class="swiper-slide">
+                  <div class="testimonial-style-two">
+                    <div class="top-info">
+                      <div class="icon">👤</div>
+                      <h5>Banerjee</h5>
+                    </div>
+                    <div class="content">
+                      <p>
+                        Ek acchi teacher ek bacche ki zindegi badal sakti hai!!
+                        This is indeed a fact of life.<br />
+                        Thank you Rajashree madam for giving a beautiful start
+                        to my kid's educational journey. Now that the session
+                        ended, I know how polished my children are. They
+                        couldn't even speak when they joined school and were not
+                        even 2 yrs old and now, they know more than I could ever
+                        image. Its all because of you! <br />Thanks to you too
+                        Ashwini madam for being there always when we needed.
+                      </p>
+                      <div class="bottom-info">
+                        <div class="provider">
+                          <!-- <div class="thumb">
+                                                    <img src="img/team/m1.jpg" alt="Image Not Found">
+                                                </div>
+                                                <div class="info">
+                                                    <h4>Kennsual Martin</h4>
+                                                    <span>Laravel Batch - 11</span>
+                                                </div> -->
+                        </div>
+                        <div class="provider">
+                          <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Item -->
+
+                <!-- Single Item -->
+                <div class="swiper-slide">
+                  <div class="testimonial-style-two">
+                    <div class="top-info">
+                      <div class="icon">👤</div>
+                      <h5>Rupali Mankar</h5>
+                    </div>
+                    <div class="content">
+                      <p>
+                        Thank u Ashwini Mam, Yashshree Mam and Millennium kidss
+                        Khamla team for taking so much effort to encourage and
+                        involve all kids to dance and make event more successful
+                        Kudos to all team
+                      </p>
+                      <div class="bottom-info">
+                        <div class="provider">
+                          <!-- <div class="thumb">
+                                                    <img src="img/team/m1.jpg" alt="Image Not Found">
+                                                </div>
+                                                <div class="info">
+                                                    <h4>Kennsual Martin</h4>
+                                                    <span>Laravel Batch - 11</span>
+                                                </div> -->
+                        </div>
+                        <div class="provider">
+                          <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Item -->
+                <!-- Single Item -->
+                <div class="swiper-slide">
+                  <div class="testimonial-style-two">
+                    <div class="top-info">
+                      <div class="icon">👤</div>
+                      <h5>Prajakta Warjukar</h5>
+                    </div>
+                    <div class="content">
+                      <p>
+                        My daughter is in Millenniumium kidss since 4 and half
+                        years... Happy with the kind of care taken by the team..
+                        Various activities taken by them are great for holistic
+                        development.. Highly recommended..
+                      </p>
+                      <div class="bottom-info">
+                        <div class="provider">
+                          <!-- <div class="thumb">
+                                                    <img src="img/team/m1.jpg" alt="Image Not Found">
+                                                </div>
+                                                <div class="info">
+                                                    <h4>Kennsual Martin</h4>
+                                                    <span>Laravel Batch - 11</span>
+                                                </div> -->
+                        </div>
+                        <div class="provider">
+                          <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Item -->
+                <!-- Single Item -->
+                <div class="swiper-slide">
+                  <div class="testimonial-style-two">
+                    <div class="top-info">
+                      <div class="icon">👤</div>
+                      <h5>Anup Deshpande</h5>
+                    </div>
+                    <div class="content">
+                      <p>
+                        Very good teachers and good facilities for childrens.
+                        Nice program and activities are provided for children to
+                        enhance learning experience.
+                      </p>
+                      <div class="bottom-info">
+                        <div class="provider">
+                          <!-- <div class="thumb">
+                                                    <img src="img/team/m1.jpg" alt="Image Not Found">
+                                                </div>
+                                                <div class="info">
+                                                    <h4>Kennsual Martin</h4>
+                                                    <span>Laravel Batch - 11</span>
+                                                </div> -->
+                        </div>
+                        <div class="provider">
+                          <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Item -->
+
+                <!-- Single Item -->
+                <div class="swiper-slide">
+                  <div class="testimonial-style-two">
+                    <div class="top-info">
+                      <div class="icon">👤</div>
+                      <h5>Sanskruti Deodhar</h5>
+                    </div>
+                    <div class="content">
+                      <p>
+                        This day care is such a homely place for your kid.I am
+                        sending my kid since she was 3.The head Mrs. Pitale maam
+                        ,teachers and staff are so kind,caring,friendly and
+                        motherly. They engage your child in developing their
+                        creativity,social skills,motors skills and to adjust
+                        with all the kids around with lot of fun activities. The
+                        kids paint,draw,dance,play,study and celebrate all the
+                        festivals together. If any parent wants to work in their
+                        offices without any stress then this place is right
+                        place to enroll your kid. Facilities:cctv access to
+                        parents, Hygenic washrooms and play area, Day care is
+                        working on most of the days except mandatory
+                        holidays,tuition facility,excellent and hardworking
+                        teachers. Suggestion:Can start tiffin facilities or
+                        providing snacks for kids.
+                      </p>
+                      <div class="bottom-info">
+                        <div class="provider">
+                          <!-- <div class="thumb">
+                                                    <img src="img/team/m1.jpg" alt="Image Not Found">
+                                                </div>
+                                                <div class="info">
+                                                    <h4>Kennsual Martin</h4>
+                                                    <span>Laravel Batch - 11</span>
+                                                </div> -->
+                        </div>
+                        <div class="provider">
+                          <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Item -->
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- End Testimonial -->
-	
-	    <!-- Start Footer 
+
+    <!-- Start Footer 
     ============================================= -->
     <footer class="footer-style-three bg-gray-gradient-secondary">
-        <div class="footer-shape-style-three">
-            <img src="img/shape/7.png" alt="Image Not Found">
-            <img src="img/shape/5.png" alt="Image Not Found" >
-        </div>
-        <div class="container">
-            <div class="f-items default-padding">
-                <div class="row">
-                    <div class="col-lg-5 col-md-6 footer-item pr-30 pr-md-15 pr-xs-15">
-                        <div class="f-item about">
-                            <div class="footer-logo">
-                                <img src="img/logo-3.png" alt="Image Not Found">
-                            </div>
-                            <p>
-                                Aayu Educare Society proudly runs Millennium Kidss Preschool & Daycare in Nagpur, established in 2016.
-                            </p>
-                             <h4>Get In Touch</h4>
-                            <ul class="app-store">
-                                <li>
-                                    Monday to Saturday: <span class="time">9.00am – 06.00pm</span>
-                                </li>
-                                <li>
-                                    Sunday: <span class="time">Close</span>
-                                </li>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 footer-item">
-                        <div class="f-item link">
-                            <h4 class="widget-title">Useful links</h4>
-                            <ul>
-                                <li>
-                                    <a href="about.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="#">Class</a>
-                                </li>
-                                <li>
-                                    <a href="#">Location</a>
-                                </li>
-                                <li>
-                                    <a href="blog.html">Blog</a>
-                                </li>
-                                <li>
-                                    <a href="event.html">Events</a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-6 footer-item">
-                        <div class="f-item">
-                            <h4 class="widget-title">Contact Us</h4>
-                            <ul class="contact-widget">
-                                <li>
-                                    <div class="icon">
-                                        <i class="fa-solid fa-location-dot"></i>
-
-                                    </div>
-                                    <div class="content">
-                                        <p Style="color:#04000b">
-                                            Plot No 4 Bhausaheb Surve Nagar Near Trimurti Nagar Nagpur Maharashtra.440022
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fa-solid fa-phone"></i>
-                                    </div>
-                                    <div class="content">
-                                        <a href="tel:8600031558/9356673019">8600031558/9356673019</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fa-solid fa-envelope"></i>
-
-                                    </div>
-                                    <div class="content">
-                                        <a href="mailto:millenniumkids.nag@gmail.com">Millenniumkids.nag@gmail.com</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
+      <div class="footer-shape-style-three">
+        <img src="img/shape/7.png" alt="Image Not Found" />
+        <img src="img/shape/5.png" alt="Image Not Found" />
+      </div>
+      <div class="container">
+        <div class="f-items default-padding">
+          <div class="row">
+            <div class="col-lg-5 col-md-6 footer-item pr-30 pr-md-15 pr-xs-15">
+              <div class="f-item about">
+                <div class="footer-logo">
+                  <img src="img/logo-3.png" alt="Image Not Found" />
                 </div>
+                <p>
+                  Aayu Educare Society proudly runs Millennium Kidss Preschool &
+                  Daycare in Nagpur, established in 2016.
+                </p>
+                <h4>Get In Touch</h4>
+                <ul class="app-store">
+                  <li>
+                    Monday to Saturday:
+                    <span class="time">9.00am – 07.00pm</span>
+                  </li>
+                  <li>Sunday: <span class="time">Close</span></li>
+                </ul>
+              </div>
             </div>
-            <!-- Start Footer Bottom -->
-            <div class="footer-bottom style-three">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p>&copy; Copyright 2024. All Rights Reserved by <a href="#">MillenniumKidss</a></p>
+            <div class="col-lg-2 col-md-6 footer-item">
+              <div class="f-item link">
+                <h4 class="widget-title">Useful links</h4>
+                <ul>
+                  <li>
+                    <a href="about.html">About Us</a>
+                  </li>
+                  <li>
+                    <a href="#">Class</a>
+                  </li>
+                  <li>
+                    <a href="#">Location</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#">Events</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 footer-item">
+              <div class="f-item">
+                <h4 class="widget-title">Contact Us</h4>
+                <ul class="contact-widget">
+                  <li>
+                    <div class="icon">
+                      <i class="fa-solid fa-location-dot"></i>
                     </div>
-					
-                     <div class="col-lg-6 text-end">
-                        <ul class="link-list">
-                            <li>
-                                <a href="https://www.facebook.com/millenniumkidssngp"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/millenniumkidssngp/"><i class="fab fa-instagram"></i></a>
-                            </li>
-                            <li>
-                                 <a href="https://www.youtube.com/@MillenniumKidsNagpur"><i class="fab fa-youtube"></i></a>
-                            </li>
-							<li>
-                                <a href="https://www.linkedin.com/in/millennium-kidss-preschool-and-daycare-765313389/"><i class="fab fa-linkedin-in"></i></a>
-                            </li>
-                            <li>
-                                 <a href="https://in.pinterest.com/millenniumkidssngp/"><i class="fab fa-pinterest-p"></i></a>
-                            </li>
-                        </ul>
-                    </div> 
-                </div>
+                    <div class="content">
+                      <p style="color: #04000b">
+                        Plot No 4 Bhausaheb Surve Nagar Near Trimurti Nagar
+                        Nagpur Maharashtra.440022
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="content">
+                      <a href="tel:8600031558/9356673019"
+                        >8600031558/9356673019</a
+                      >
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="content">
+                      <a href="mailto:millenniumkids.nag@gmail.com"
+                        >Millenniumkids.nag@gmail.com</a
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <!-- End Footer Bottom -->
+          </div>
         </div>
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom style-three">
+          <div class="row">
+            <div class="col-lg-6">
+              <p>
+                &copy; Copyright 2024. All Rights Reserved by
+                <a href="#">MillenniumKidss</a>
+              </p>
+            </div>
+
+            <div class="col-lg-6 text-end">
+              <ul class="link-list">
+                <li>
+                  <a href="https://www.facebook.com/millenniumkidssngp"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/millenniumkidssngp/"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@MillenniumKidsNagpur"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/millennium-kidss-preschool-and-daycare-765313389/"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://in.pinterest.com/millenniumkidssngp/"
+                    ><i class="fab fa-pinterest-p"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End Footer Bottom -->
+      </div>
     </footer>
     <!--footer area End -->
-    
+
     <!-- jQuery Frameworks
     ============================================= -->
     <script src="js/jquery-3.7.1.min.js"></script>
@@ -1118,6 +1364,5 @@ Suggestion:Can start tiffin facilities or providing snacks for kids.
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/SplitText.min.js"></script>
     <script src="js/main.js"></script>
-
-</body>
+  </body>
 </html>

@@ -213,7 +213,7 @@
       }
 
       /* Image fills container width and height */
-      #homeBlogContainer .thumb > img {
+      /* #homeBlogContainer .thumb > img {
         position: absolute !important;
         top: 0 !important;
         left: 0 !important;
@@ -226,7 +226,7 @@
         display: block !important;
         object-fit: contain !important;
         object-position: center !important;
-      }
+      } */
 
       /* Category label stays above the image */
       #homeBlogContainer .thumb .meta {
@@ -314,6 +314,22 @@
 
         width: 100% !important;
         text-align: justify !important;
+      }
+
+      /* Desktop dropdown menus */
+      @media (min-width: 992px) {
+        .navbar-nav > li.dropdown {
+          position: relative;
+        }
+
+        .navbar-nav > li.dropdown:hover > .dropdown-menu {
+          display: block;
+        }
+
+        .navbar-nav > li.dropdown > .dropdown-menu {
+          margin-top: 0;
+          z-index: 9999;
+        }
       }
     </style>
   </head>
@@ -1071,7 +1087,7 @@
         <img src="img/shape/77.png" alt="Image Not Found" />
       </div>
       <div class="shape-bottom">
-        <img src="img/shape/79.png" alt="Image Not Found" />
+        <!-- <img src="img/shape/79.png" alt="Image Not Found" /> -->
       </div>
       <div class="container">
         <div class="row">
@@ -1102,70 +1118,100 @@
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper" id="testimonialContainer">
                           <!-- Single Item -->
-                          <!-- <div class="swiper-slide">
-                                        <div class="testimonial-style-five-item">
-                                            <img src="img/shape/quote-2.png" alt="Image Not Found">
-                                            <p>
-                                                Very good teachers and good facilities for childrens. Nice program and activities are provided for children to enhance learning experience.
-                                            </p>
-                                            <div class="provider">
-                                                
-                                                <div class="info">
-                                                    <h4>Anup Deshpande</h4>
-                                                    <span>Preschool Parents</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
+                          <div class="swiper-slide">
+                            <div class="testimonial-style-five-item">
+                              <img
+                                src="img/shape/quote-2.png"
+                                alt="Image Not Found"
+                              />
+                              <p>
+                                Very good teachers and good facilities for
+                                childrens. Nice program and activities are
+                                provided for children to enhance learning
+                                experience.
+                              </p>
+                              <div class="provider">
+                                <div class="info">
+                                  <h4>Anup Deshpande</h4>
+                                  <span>Preschool Parents</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                           <!-- End Single Item -->
                           <!-- Single Item -->
-                          <!-- <div class="swiper-slide">
-                                        <div class="testimonial-style-five-item">
-                                            <img src="img/shape/quote-2.png" alt="Image Not Found">
-                                            <p>
-                                                My daughter is in Millennium kidss since 4 and half years... Happy with the kind of care taken by the team.. Various activities taken by them are great for holistic development.. Highly recommended..
-                                            </p>
-                                            <div class="provider">
-                                               
-                                                <div class="info">
-                                                    <h4>Prajakta Warjukar</h4>
-                                                    <span>Kindergarten Parents</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                          <!-- End Single Item -->
-
-                          <!-- Single Item -->
-                          <!-- <div class="swiper-slide">
-                                        <div class="testimonial-style-five-item">
-                                            <img src="img/shape/quote-2.png" alt="Image Not Found">
-                                            <p>Millenium kidss (Medied Branch) awesome school and daycare. My child has learnt dot form here, from daily routine activities to educationl things. Also the language and verbal skills have developed in my child over the period.The staff is dong recommendable job and totally satisfied with the school as well daycare service.    </p>
-                                            <div class="provider">
-                                               
-                                                <div class="info">
-                                                    <h4>Ojasvi Warhade</h4>
-                                                    <span>Kindergarten Parents</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
+                          <div class="swiper-slide">
+                            <div class="testimonial-style-five-item">
+                              <img
+                                src="img/shape/quote-2.png"
+                                alt="Image Not Found"
+                              />
+                              <p>
+                                My daughter is in Millennium kidss since 4 and
+                                half years... Happy with the kind of care taken
+                                by the team.. Various activities taken by them
+                                are great for holistic development.. Highly
+                                recommended..
+                              </p>
+                              <div class="provider">
+                                <div class="info">
+                                  <h4>Prajakta Warjukar</h4>
+                                  <span>Kindergarten Parents</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                           <!-- End Single Item -->
 
                           <!-- Single Item -->
-                          <!-- <div class="swiper-slide">
-                                        <div class="testimonial-style-five-item">
-                                            <img src="img/shape/quote-2.png" alt="Image Not Found">
-                                            <p>My daughter is in day care since last 2 years. Craft activities, daily Yoga, Games helped her develope a lot and create bond with teachers and friends. I always recommend my friends to take admission for their children here as it is very reliable.</p>
-                                            <div class="provider">
-                                                
-                                                <div class="info">
-                                                    <h4>Amruta Athalye</h4>
-                                                    <span>Kindergarten Parents</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
+                          <div class="swiper-slide">
+                            <div class="testimonial-style-five-item">
+                              <img
+                                src="img/shape/quote-2.png"
+                                alt="Image Not Found"
+                              />
+                              <p>
+                                Millenium kidss (Medied Branch) awesome school
+                                and daycare. My child has learnt dot form here,
+                                from daily routine activities to educationl
+                                things. Also the language and verbal skills have
+                                developed in my child over the period.The staff
+                                is dong recommendable job and totally satisfied
+                                with the school as well daycare service.
+                              </p>
+                              <div class="provider">
+                                <div class="info">
+                                  <h4>Ojasvi Warhade</h4>
+                                  <span>Kindergarten Parents</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End Single Item -->
+
+                          <!-- Single Item -->
+                          <div class="swiper-slide">
+                            <div class="testimonial-style-five-item">
+                              <img
+                                src="img/shape/quote-2.png"
+                                alt="Image Not Found"
+                              />
+                              <p>
+                                My daughter is in day care since last 2 years.
+                                Craft activities, daily Yoga, Games helped her
+                                develope a lot and create bond with teachers and
+                                friends. I always recommend my friends to take
+                                admission for their children here as it is very
+                                reliable.
+                              </p>
+                              <div class="provider">
+                                <div class="info">
+                                  <h4>Amruta Athalye</h4>
+                                  <span>Kindergarten Parents</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                           <!-- End Single Item -->
                         </div>
                         <div class="swiper-pagination"></div>
@@ -1185,8 +1231,7 @@
       <!-- /.container -->
     </div>
     <!-- /.advisor-style-three-area -->
-    <!-- Start Gallery 
-    ============================================= -->
+    <!-- Start Gallery -->
     <div class="gallery-style-one-area">
       <div class="shape">
         <img src="img/shape/80.png" alt="Image Not Found" />
@@ -1300,7 +1345,7 @@
             <p>Loading blogs...</p>
           </div>
           <!-- Single Item -->
-          <!-- <div class="col-xl-4 col-md-6 col-lg-6 mb-30">
+          <div class="col-xl-4 col-md-6 col-lg-6 mb-30">
             <div
               class="home-blog-style-three-item color-style-one wow fadeInUp"
             >
@@ -1337,10 +1382,11 @@
                 <img src="img/icon/67.png" alt="Image Not Found" />
               </a>
             </div>
-          </div> -->
-          <!-- End Single Item -->
+          </div>
+
+          <!-- End Single Item-->
           <!-- Single Item -->
-          <!-- <div class="col-xl-4 col-md-6 col-lg-6 mb-30">
+          <div class="col-xl-4 col-md-6 col-lg-6 mb-30">
             <div
               class="home-blog-style-three-item wow fadeInUp"
               data-wow-delay="200ms"
@@ -1367,7 +1413,7 @@
                 <div class="blog-meta">
                   <ul>
                     <li>By <a href="#">– Millennium Kidss, Nagpur</a></li>
-                    <li>1 Aug, 2026</li>
+                    <li>25 Aug, 2026</li>
                   </ul>
                 </div>
               </div>
@@ -1378,10 +1424,10 @@
                 <img src="img/icon/67.png" alt="Image Not Found" />
               </a>
             </div>
-          </div> -->
+          </div>
           <!-- End Single Item -->
           <!-- Single Item -->
-          <!-- <div class="col-xl-4 col-md-6 col-lg-6 mb-30">
+          <div class="col-xl-4 col-md-6 col-lg-6 mb-30">
             <div
               class="home-blog-style-three-item color-style-three wow fadeInUp"
               data-wow-delay="400ms"
@@ -1411,7 +1457,7 @@
                 <div class="blog-meta">
                   <ul>
                     <li>By <a href="#">– Millennium Kidss, Nagpur</a></li>
-                    <li>26 Nov, 2025</li>
+                    <li>01 Nov, 2026</li>
                   </ul>
                 </div>
               </div>
@@ -1422,7 +1468,7 @@
                 <img src="img/icon/67.png" alt="Image Not Found" />
               </a>
             </div>
-          </div> -->
+          </div>
           <!-- End Single Item -->
         </div>
       </div>
@@ -1602,7 +1648,7 @@
                 <ul class="app-store">
                   <li>
                     Monday to Saturday:
-                    <span class="time">9.00am – 06.00pm</span>
+                    <span class="time">9.00am – 07.00pm</span>
                   </li>
                   <li>Sunday: <span class="time">Close</span></li>
                 </ul>
@@ -1622,10 +1668,10 @@
                     <a href="#">Location</a>
                   </li>
                   <li>
-                    <a href="blog.html">Blog</a>
+                    <a href="#">Blog</a>
                   </li>
                   <li>
-                    <a href="event.html">Events</a>
+                    <a href="#">Events</a>
                   </li>
                   <li>
                     <a href="contact.html">Contact</a>
@@ -1947,6 +1993,7 @@
                     <img
                       src="${image}"
                       alt="${escapeBlogHTML(blog.title)}"
+                      width:100%;height:100%;object-fit:cover;
                     />
 
                     <div class="meta">
@@ -1964,9 +2011,7 @@
                       </a>
                     </h3>
           
-                    <h6>
-                      ${escapeBlogHTML(blog.shortDescription || "")}
-                    </h6>
+                  
 
                     <p class="blog-short-description">
                        ${escapeBlogHTML(blog.content || "")}

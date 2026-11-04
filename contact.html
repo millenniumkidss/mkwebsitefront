@@ -40,6 +40,23 @@ Millennium Kidss phone number, preschool enquiry Nagpur, early education contact
     <link href="css/unit-test.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
+    <style>
+      /* Desktop dropdown menus */
+      @media (min-width: 992px) {
+        .navbar-nav > li.dropdown {
+          position: relative;
+        }
+
+        .navbar-nav > li.dropdown:hover > .dropdown-menu {
+          display: block;
+        }
+
+        .navbar-nav > li.dropdown > .dropdown-menu {
+          margin-top: 0;
+          z-index: 9999;
+        }
+      }
+    </style>
     <!-- ========== End Stylesheet ========== -->
   </head>
 
@@ -488,7 +505,7 @@ Millennium Kidss phone number, preschool enquiry Nagpur, early education contact
                 <ul class="app-store">
                   <li>
                     Monday to Saturday:
-                    <span class="time">8.00am – 07.00pm</span>
+                    <span class="time">9.00am – 07.00pm</span>
                   </li>
                   <li>Sunday: <span class="time">Close</span></li>
                 </ul>

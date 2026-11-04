@@ -41,6 +41,24 @@
     <link href="css/unit-test.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
+    <style>
+      /* Desktop dropdown menus */
+      @media (min-width: 992px) {
+        .navbar-nav > li.dropdown {
+          position: relative;
+        }
+
+        .navbar-nav > li.dropdown:hover > .dropdown-menu {
+          display: block;
+        }
+
+        .navbar-nav > li.dropdown > .dropdown-menu {
+          margin-top: 0;
+          z-index: 9999;
+        }
+      }
+    </style>
+    >
     <!-- ========== End Stylesheet ========== -->
   </head>
 
@@ -1063,7 +1081,7 @@
                 <ul class="app-store">
                   <li>
                     Monday to Saturday:
-                    <span class="time">9.00am – 06.00pm</span>
+                    <span class="time">9.00am – 07.00pm</span>
                   </li>
                   <li>Sunday: <span class="time">Close</span></li>
                 </ul>
@@ -1083,10 +1101,10 @@
                     <a href="#">Location</a>
                   </li>
                   <li>
-                    <a href="blog.html">Blog</a>
+                    <a href="#">Blog</a>
                   </li>
                   <li>
-                    <a href="event.html">Events</a>
+                    <a href="#">Events</a>
                   </li>
                   <li>
                     <a href="contact.html">Contact</a>
